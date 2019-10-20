@@ -13,6 +13,7 @@ export class TopBarComponent implements OnInit {
     this.test = '123';
   }
 
+
   ngOnInit() {
 /*    this.menus = {
       Portfolio: [['item1', 'href'], ['item2', 'href']]
