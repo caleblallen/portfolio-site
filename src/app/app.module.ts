@@ -5,11 +5,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule} from '@angular/material';
 import { TopBarComponent } from './Components/top-bar/top-bar.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent
+    TopBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -17,7 +18,8 @@ import { TopBarComponent } from './Components/top-bar/top-bar.component';
     MatToolbarModule,
     MatMenuModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

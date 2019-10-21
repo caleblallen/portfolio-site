@@ -1,20 +1,18 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span>Caleb Allen</span>
-
-
-
     <span class="spacer"></span>
-
-    <button *ngFor="let k of keys" mat-button>{{ k }}</button>
-
-<!--    <button mat-button [matMenuTriggerFor]="Portfolio">Portfolio</button>-->
-
+    <ng-container *ngFor="let k of keys">
+      <ng-container *ngIf="menus[k].length > 0">
+        <button mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
+        <mat-menu #menu="matMenu">
+              <button mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
+        </mat-menu>
+      </ng-container>
+      <ng-container *ngIf="menus[k].length <= 0">
+        <button mat-button>{{ k }}</button>
+      </ng-container>
+    </ng-container>
   </mat-toolbar-row>
 </mat-toolbar>
-<!--<li *ngFor="let hero of heroes">-->
 
-<mat-menu #Portfolio="matMenu">
-  <button mat-menu-item>I1</button>
-  <button mat-menu-item>Item 2</button>
-</mat-menu>

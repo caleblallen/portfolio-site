@@ -30,12 +30,8 @@ export class TopBarComponent implements OnInit {
           link: 'href://'
         }
       ],
-      Blog: [
-        {}
-      ],
-      Other: [
-        {}
-      ]
+      Blog: [],
+      // Other: []
     };
     this.keys = Object.keys(this.menus);
   }
