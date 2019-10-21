@@ -6,11 +6,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule} from '@angular/material';
 import { TopBarComponent } from './Components/top-bar/top-bar.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomePageComponent } from './Components/home-page/home-page.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { PortraitComponent } from './Components/portrait/portrait.component';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
+    HomePageComponent,
+    PortraitComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +25,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatMenuModule,
     MatIconModule,
     MatButtonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatGridListModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
