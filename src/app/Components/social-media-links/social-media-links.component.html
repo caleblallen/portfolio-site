@@ -1,0 +1,5 @@
+<ng-container *ngFor="let soc of socialMedia">
+  <div class="soc-nets">
+    <button mat-icon-button [attr.aria-label]="soc.aria" color="accent"><i [className]="soc.icon + ' soc-net'"></i></button>
+  </div>
+</ng-container>

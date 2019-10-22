@@ -10,6 +10,10 @@ import { HomePageComponent } from './Components/home-page/home-page.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import { PortraitComponent } from './Components/portrait/portrait.component';
 import {MatCardModule} from '@angular/material/card';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import { HomepageTitleBarComponent } from './Components/homepage-title-bar/homepage-title-bar.component';
+import {MatDividerModule} from '@angular/material/divider';
+import { SocialMediaLinksComponent } from './Components/social-media-links/social-media-links.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +21,8 @@ import {MatCardModule} from '@angular/material/card';
     TopBarComponent,
     HomePageComponent,
     PortraitComponent,
+    HomepageTitleBarComponent,
+    SocialMediaLinksComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +33,9 @@ import {MatCardModule} from '@angular/material/card';
     MatButtonModule,
     AppRoutingModule,
     MatGridListModule,
-    MatCardModule
+    MatCardModule,
+    FlexLayoutModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

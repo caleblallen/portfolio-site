@@ -1,5 +1,9 @@
-<mat-grid-list cols="6" rowHeight="16vh">
-  <mat-grid-tile [colspan]="6" [rowspan]="1" [style.background]="'lightblue'"><span class="mat-display-4">Caleb Allen</span></mat-grid-tile>
-  <mat-grid-tile [colspan]="2" [rowspan]="4" [style.background]="'pink'" ><app-portrait></app-portrait></mat-grid-tile>
-<!--  <mat-grid-tile [colspan]="2" [rowspan]="1" [style.background]="'blue'"><span>Social Media</span></mat-grid-tile>-->
-</mat-grid-list>
+
+<div flex fxLayout="row">
+  <div fxFlex="5"></div>
+  <div fxFlex="15"><app-portrait></app-portrait></div>
+  <div fxFlex="3"> <app-social-media-links></app-social-media-links> </div>
+  <div fxFlex="72"> <app-homepage-title-bar></app-homepage-title-bar> </div>
+  <div fxFlex="5"></div>
+</div>
+

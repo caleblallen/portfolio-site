@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'ZCOOL XiaoWei';
+  font-style: normal;
+  font-weight: 400;
+  src: url(assets/ZCOOL-XiaoWei/ZCOOL-XiaoWei-Regular.eot);
+  src: local('ZCOOL XiaoWei Regular'), local('ZCOOLXiaoWei-Regular'), local('ZCOOL XiaoWei'), url(assets/ZCOOL-XiaoWei/ZCOOL-XiaoWei-Regular.ttf) format('truetype'), url(assets/ZCOOL-XiaoWei/ZCOOL-XiaoWei-Regular.eot?#iefix) format('embedded-opentype'), url(assets/ZCOOL-XiaoWei/ZCOOL-XiaoWei-Regular.svg#ZCOOLXiaoWei) format('svg'), url(assets/ZCOOL-XiaoWei/ZCOOL-XiaoWei-Regular.woff2) format('woff2'), url(assets/ZCOOL-XiaoWei/ZCOOL-XiaoWei-Regular.woff) format('woff');
+}
+
