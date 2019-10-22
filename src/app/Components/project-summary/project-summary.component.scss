@@ -1,0 +1,12 @@
+.framework-badge {
+  font-size: 3em;
+}
+
+.summary-card {
+  mat-card-actions {
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-left: 2px;
+  }
+}

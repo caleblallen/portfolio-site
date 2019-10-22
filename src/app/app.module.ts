@@ -19,6 +19,7 @@ import { ProjectWriteupComponent } from './Components/project-writeup/project-wr
 import { ProjectSummaryComponent } from './Components/project-summary/project-summary.component';
 import { MarkdownModule} from 'ngx-markdown';
 import {MatListModule} from '@angular/material/list';
+import { IconPillsComponent } from './Components/icon-pills/icon-pills.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import {MatListModule} from '@angular/material/list';
     PortfolioProjectComponent,
     ProjectWriteupComponent,
     ProjectSummaryComponent,
+    IconPillsComponent,
   ],
   imports: [
     BrowserModule,

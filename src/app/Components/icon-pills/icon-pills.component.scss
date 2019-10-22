@@ -1,0 +1,23 @@
+$primary: #7b1fa2;
+$accent: #69f0ae;
+$warn: #f44336;
+$borderRadius: 40px;
+.pill-badge-wrapper {
+  display: inline-block;
+  min-width: 48%;
+  vertical-align: middle;
+  margin-bottom: 5px;
+  border-radius: $borderRadius;
+  line-height: 1.6;
+  font-size: 1.5em;
+  border: 1px solid white;
+  i {
+    height: 100%;
+    padding: 0 .4em 0 .6em;
+  }
+  div {
+    border-left: 1px dashed white;
+    display: inline-block;
+    padding: 0 .6em 0 .6em;
+  }
+}
