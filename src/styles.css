@@ -2,9 +2,17 @@
 
 html, body { height: 100%; }
 body { margin: 0;
-  /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
 }
 * {
   font-family: 'ZCOOL XiaoWei', serif !important;
 
+}
+.bounded-row-wrapper{
+  display:flex;
+  justify-content: center;
+}
+
+
+.bounded-row {
+  max-width: 1000px;
 }

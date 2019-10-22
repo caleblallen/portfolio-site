@@ -1,0 +1,79 @@
+<section class="project-writeup-wrapper">
+  <h2>{{ project.title }}</h2>
+
+  <mat-divider></mat-divider>
+  <h4>Description:</h4>
+  <section class="pl-1em">
+  <p> {{ project.description }}</p>
+
+  </section>
+
+  <ng-container *ngIf="project.designGoals !== null">
+  <mat-divider></mat-divider>
+    <h4>Design Goals:</h4>
+    <section class="pl-1em">
+
+    <span [innerHTML]="project.designGoals.intro | markdown"></span>
+
+    <ng-container *ngFor="let g of project.designGoals.goals">
+      <p class="pl-3em"><i class="icon ion-md-arrow-forward"></i><span class="pl-1em" [innerHTML]="g"></span> </p>
+    </ng-container>
+    </section>
+  </ng-container>
+
+  <ng-container *ngIf="project.liveLink !== null">
+    <mat-divider></mat-divider>
+
+    <h4>View it Live:</h4>
+    <section class="pl-1em">
+
+      <mat-list>
+        <mat-list-item>
+
+
+          <section mat-line>
+            <button mat-button color="accent"><i mat-list-icon class="icon ion-md-sync"></i>&nbsp;{{project.liveLink.text}} </button>
+          </section>
+        </mat-list-item>
+      </mat-list>
+    </section>
+    <section class="mb-1em"></section>
+  </ng-container>
+
+  <mat-divider></mat-divider>
+  <h4>Source Code:</h4>
+  <section class="pl-1em">
+
+  <mat-list>
+    <mat-list-item>
+
+
+      <section mat-line>
+        <button mat-button color="accent"><i mat-list-icon class="icon ion-ios-code-working"></i>&nbsp;{{project.sourceCode.text}} </button>
+      </section>
+    </mat-list-item>
+  </mat-list>
+  </section>
+  <section class="mb-1em"></section>
+
+
+  <ng-container *ngIf="project.gallery.length > 0">
+    <mat-divider></mat-divider>
+    <h5>Gallery</h5>
+    <section class="pl-1em">
+
+    <section class="gallery-cards">
+      <!--TODO: Lightbox here-->
+      <img *ngFor="let i of project.gallery" [src]="i" />
+    </section>
+    </section>
+  </ng-container>
+
+  <mat-divider></mat-divider>
+
+  <h4>What I learned</h4>
+  <section class="pl-1em">
+
+  <section [innerHTML]="project.postMortem | markdown"></section>
+  </section>
+</section>

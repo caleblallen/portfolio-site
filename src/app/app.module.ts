@@ -14,6 +14,11 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { HomepageTitleBarComponent } from './Components/homepage-title-bar/homepage-title-bar.component';
 import {MatDividerModule} from '@angular/material/divider';
 import { SocialMediaLinksComponent } from './Components/social-media-links/social-media-links.component';
+import { PortfolioProjectComponent } from './Components/portfolio-project/portfolio-project.component';
+import { ProjectWriteupComponent } from './Components/project-writeup/project-writeup.component';
+import { ProjectSummaryComponent } from './Components/project-summary/project-summary.component';
+import { MarkdownModule} from 'ngx-markdown';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -23,6 +28,9 @@ import { SocialMediaLinksComponent } from './Components/social-media-links/socia
     PortraitComponent,
     HomepageTitleBarComponent,
     SocialMediaLinksComponent,
+    PortfolioProjectComponent,
+    ProjectWriteupComponent,
+    ProjectSummaryComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +43,9 @@ import { SocialMediaLinksComponent } from './Components/social-media-links/socia
     MatGridListModule,
     MatCardModule,
     FlexLayoutModule,
-    MatDividerModule
+    MatDividerModule,
+    MarkdownModule.forRoot(),
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

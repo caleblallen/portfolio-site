@@ -6,4 +6,6 @@
 
 body {
   padding: 5px;
+  height: unset;
+  min-height:100%;
 }
