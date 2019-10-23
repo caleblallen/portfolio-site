@@ -6,7 +6,10 @@
   mat-card-actions {
     display:flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 2px;
+  }
+  button {
+    margin-right: 5px;
   }
 }
