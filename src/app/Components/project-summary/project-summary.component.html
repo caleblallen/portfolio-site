@@ -5,10 +5,51 @@
   </mat-card-header>
   <mat-card-content>
 
-    <ng-container *ngFor="let f of project.frameWorks">
-      <app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills>
-    </ng-container>
 
+    <div class="container" fxLayout="row" fxLayout.lt-md="column">
+      <div class="container" fxLayout="column" fxFlexOrder.lt-md="2" fxFlex="50%" gdAlignColumns>
+        <!--TODO: Even though the number of frameworks will always be small, two loops here is painful.-->
+        <ng-container *ngFor="let f of project.frameWorks; let index=index">
+          <ng-container *ngIf="index > project.frameWorks.length/2">
+          <div class="container" fxLayout="column">
+            <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills></div>
+          </div>
+
+          </ng-container>
+        </ng-container>
+      </div>
+      <div class="container" fxLayout="column" fxFlexOrder.lt-md="1" fxFlex="50%" gdAlignColumns>
+        <ng-container *ngFor="let f of project.frameWorks; let index=index">
+          <ng-container *ngIf="index <= project.frameWorks.length/2">
+            <div class="container" fxLayout="column">
+              <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills></div>
+            </div>
+
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+
+    <!--    <ng-container *ngFor="let f of project.frameWorks">-->
+<!--
+    <ng-container *ngFor="let f of project.frameWorks; let index=index">
+      <div class="container" fxLayout="column" fxFlex="50%">
+        <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills></div>
+      </div>
+    </ng-container>
+-->
+<!--    <div class="container" fxLayout="row" fxLayout.lt-md="column">
+
+      <div class="container" fxLayout="column" fxFlex="50%" gdAlignColumns>
+        <div><app-icon-pills [text]="'C#'" [icon]="pServe.getFrameworkIcon('c#')"></app-icon-pills></div>
+        <div><app-icon-pills [text]="'.NET'" [icon]="pServe.getFrameworkIcon('.NET')"></app-icon-pills></div>
+        <div><app-icon-pills [text]="'jQuery'" [icon]="pServe.getFrameworkIcon('jQuery')"></app-icon-pills></div>
+      </div>
+      <div class="container" fxLayout="column" fxFlex="50%">
+        <div><app-icon-pills [text]="'PHP'" [icon]="pServe.getFrameworkIcon('PHP')"></app-icon-pills></div>
+        <div><app-icon-pills [text]="'Apache'" [icon]="pServe.getFrameworkIcon('Apache')"></app-icon-pills></div>
+      </div>
+    </div>-->
   </mat-card-content>
   <mat-card-actions>
     <button mat-flat-button color="accent">Source Code</button>
