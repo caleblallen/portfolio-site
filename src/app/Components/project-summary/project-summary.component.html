@@ -6,19 +6,19 @@
   <mat-card-content>
 
 
-    <div class="container" fxLayout="row" fxLayout.lt-md="column">
+    <div class="container" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px">
       <div class="container" fxLayout="column" fxFlexOrder.lt-md="2" fxFlex="50%" gdAlignColumns>
         <!--TODO: Even though the number of frameworks will always be small, two loops here is painful.-->
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
           <ng-container *ngIf="index > project.frameWorks.length/2">
-          <div class="container" fxLayout="column">
+          <div class="container" fxLayout="column" fxLayoutgap="5px">
             <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills></div>
           </div>
 
           </ng-container>
         </ng-container>
       </div>
-      <div class="container" fxLayout="column" fxFlexOrder.lt-md="1" fxFlex="50%" gdAlignColumns>
+      <div class="container" fxLayout="column" fxFlexOrder.lt-md="1" fxFlex="50%" fxLayoutgap="5px">
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
           <ng-container *ngIf="index <= project.frameWorks.length/2">
             <div class="container" fxLayout="column">
@@ -52,9 +52,13 @@
     </div>-->
   </mat-card-content>
   <mat-card-actions>
-    <button mat-flat-button color="accent">Source Code</button>
-    <ng-container *ngIf="project.liveLink !== null">
-      <button mat-flat-button color="accent">Live Site</button>
-    </ng-container>
+    <div class="container" fxLayout="row">
+      <div fxFlex="50%"><button mat-stroked-button>View Source Code</button></div>
+      <div fxFlex="50%">
+        <ng-container *ngIf="project.liveLink !== null">
+          <button mat-stroked-button>Live Preview</button>
+        </ng-container>
+      </div>
+    </div>
   </mat-card-actions>
 </mat-card>
