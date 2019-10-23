@@ -2,14 +2,14 @@
     <span class="name-bar" routerLink="/">Caleb Allen</span>
     <span class="spacer"></span>
     <ng-container *ngFor="let k of keys">
-      <ng-container *ngIf="menus[k].length > 0">
+      <ng-container *ngIf="arrayTest(menus[k])">
         <button  mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
         <mat-menu #menu="matMenu">
               <button [routerLink]="link.link" mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
         </mat-menu>
       </ng-container>
-      <ng-container *ngIf="menus[k].length <= 0">
-        <button mat-button>{{ k }}</button>
+      <ng-container *ngIf="!arrayTest(menus[k])">
+        <button [routerLink]="menus[k].link" mat-button>{{ k }}</button>
       </ng-container>
     </ng-container>
 </mat-toolbar>

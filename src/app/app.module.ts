@@ -23,6 +23,8 @@ import { IconPillsComponent } from './Components/icon-pills/icon-pills.component
 import {MatRippleModule} from '@angular/material/core';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { ProjectTitleAnchorComponent } from './Components/project-title-anchor/project-title-anchor.component';
+import 'hammerjs';
+import { BlogHomeComponent } from './Components/blog-home/blog-home.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,7 @@ import { ProjectTitleAnchorComponent } from './Components/project-title-anchor/p
     ProjectSummaryComponent,
     IconPillsComponent,
     ProjectTitleAnchorComponent,
+    BlogHomeComponent,
   ],
   imports: [
     BrowserModule,

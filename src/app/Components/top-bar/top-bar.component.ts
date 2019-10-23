@@ -9,14 +9,12 @@ import { WebLink } from '../../Model/WebLink';
 })
 
 export class TopBarComponent implements OnInit {
-  public test: string;
   private menus: {
     Portfolio: WebLink[];
-    Blog: WebLink[];
+    Blog: WebLink;
   };
   private keys: string[];
   constructor(private pServe: ProjectsService) {
-    this.test = '123';
   }
 
 
@@ -24,7 +22,10 @@ export class TopBarComponent implements OnInit {
 
     this.menus = {
       Portfolio: [],
-      Blog: []
+      Blog: {
+        title: '',
+        link: '/blog'
+      }
     };
 
     const projectKeys = Object.keys(this.pServe.projects);
@@ -40,5 +41,5 @@ export class TopBarComponent implements OnInit {
     this.keys = Object.keys(this.menus);
   }
 
-
+  arrayTest(val) { return Array.isArray(val); }
 }

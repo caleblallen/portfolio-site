@@ -25,6 +25,7 @@
     "devicon": "^2.2.0",
     "github-calendar": "^1.3.2",
     "goog-webfont-dl": "^1.0.3",
+    "hammerjs": "^2.0.8",
     "ionicons": "^4.6.3",
     "ngx-markdown": "^8.2.1",
     "rxjs": "~6.4.0",
