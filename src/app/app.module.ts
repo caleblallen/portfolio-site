@@ -20,6 +20,9 @@ import { ProjectSummaryComponent } from './Components/project-summary/project-su
 import { MarkdownModule} from 'ngx-markdown';
 import {MatListModule} from '@angular/material/list';
 import { IconPillsComponent } from './Components/icon-pills/icon-pills.component';
+import {MatRippleModule} from '@angular/material/core';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { ProjectTitleAnchorComponent } from './Components/project-title-anchor/project-title-anchor.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,7 @@ import { IconPillsComponent } from './Components/icon-pills/icon-pills.component
     ProjectWriteupComponent,
     ProjectSummaryComponent,
     IconPillsComponent,
+    ProjectTitleAnchorComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,9 @@ import { IconPillsComponent } from './Components/icon-pills/icon-pills.component
     FlexLayoutModule,
     MatDividerModule,
     MarkdownModule.forRoot(),
-    MatListModule
+    MatListModule,
+    MatRippleModule,
+    MatTooltipModule
   ],
   providers: [],
   bootstrap: [AppComponent]

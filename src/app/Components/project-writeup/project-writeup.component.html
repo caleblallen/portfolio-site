@@ -1,15 +1,8 @@
 <section class="project-writeup-wrapper">
-  <h2>{{ project.title }}</h2>
-
-  <mat-divider></mat-divider>
-  <h4>Description:</h4>
-  <section class="pl-1em">
-  <p> {{ project.description }}</p>
-
-  </section>
+  <app-project-title-anchor [project]="project"></app-project-title-anchor>
+<!--  <h4>Description:</h4>-->
 
   <ng-container *ngIf="project.designGoals !== null">
-  <mat-divider></mat-divider>
     <h4>Design Goals:</h4>
     <section class="pl-1em">
 

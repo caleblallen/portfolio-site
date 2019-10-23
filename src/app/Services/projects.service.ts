@@ -157,7 +157,8 @@ export class ProjectsService {
         gallery: ['assets/img/abstract-002.png',
                   'assets/img/abstract-003.png',
                   'assets/img/abstract-004.png',
-                  'assets/img/abstract-005.png']
+                  'assets/img/abstract-005.png'],
+        anchorImage: 'assets/img/atwater-monitor.png'
       }
     };
   }

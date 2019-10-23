@@ -1,20 +1,18 @@
 <mat-card class="summary-card">
   <mat-card-header>
-    <mat-card-title>{{ project.title }}</mat-card-title>
-    <mat-card-subtitle>Summary</mat-card-subtitle>
+<!--    <mat-card-title>{{ project.title }}</mat-card-title>-->
+    <mat-card-title>Project Summary</mat-card-title>
+    <mat-card-subtitle> {{ project.title }}</mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-
-
     <div class="container" fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="5px">
       <div class="container" fxLayout="column" fxFlexOrder.lt-md="2" fxFlex="50%" gdAlignColumns>
         <!--TODO: Even though the number of frameworks will always be small, two loops here is painful.-->
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
           <ng-container *ngIf="index > project.frameWorks.length/2">
           <div class="container" fxLayout="column" fxLayoutgap="5px">
-            <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills></div>
+            <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)" [direction]="'left'"></app-icon-pills></div>
           </div>
-
           </ng-container>
         </ng-container>
       </div>
@@ -22,38 +20,16 @@
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
           <ng-container *ngIf="index <= project.frameWorks.length/2">
             <div class="container" fxLayout="column">
-              <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills></div>
+              <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)" [direction]="'right'"></app-icon-pills></div>
             </div>
-
           </ng-container>
         </ng-container>
       </div>
     </div>
-
-    <!--    <ng-container *ngFor="let f of project.frameWorks">-->
-<!--
-    <ng-container *ngFor="let f of project.frameWorks; let index=index">
-      <div class="container" fxLayout="column" fxFlex="50%">
-        <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)"></app-icon-pills></div>
-      </div>
-    </ng-container>
--->
-<!--    <div class="container" fxLayout="row" fxLayout.lt-md="column">
-
-      <div class="container" fxLayout="column" fxFlex="50%" gdAlignColumns>
-        <div><app-icon-pills [text]="'C#'" [icon]="pServe.getFrameworkIcon('c#')"></app-icon-pills></div>
-        <div><app-icon-pills [text]="'.NET'" [icon]="pServe.getFrameworkIcon('.NET')"></app-icon-pills></div>
-        <div><app-icon-pills [text]="'jQuery'" [icon]="pServe.getFrameworkIcon('jQuery')"></app-icon-pills></div>
-      </div>
-      <div class="container" fxLayout="column" fxFlex="50%">
-        <div><app-icon-pills [text]="'PHP'" [icon]="pServe.getFrameworkIcon('PHP')"></app-icon-pills></div>
-        <div><app-icon-pills [text]="'Apache'" [icon]="pServe.getFrameworkIcon('Apache')"></app-icon-pills></div>
-      </div>
-    </div>-->
   </mat-card-content>
   <mat-card-actions>
     <div class="container" fxLayout="row">
-      <div fxFlex="50%"><button mat-stroked-button>View Source Code</button></div>
+      <div fxFlex="50%"><button mat-stroked-button>Source Code</button></div>
       <div fxFlex="50%">
         <ng-container *ngIf="project.liveLink !== null">
           <button mat-stroked-button>Live Preview</button>

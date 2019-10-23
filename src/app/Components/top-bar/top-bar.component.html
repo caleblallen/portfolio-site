@@ -1,11 +1,11 @@
 <mat-toolbar color="primary">
-    <span class="name-bar">Caleb Allen</span>
+    <span class="name-bar" routerLink="/">Caleb Allen</span>
     <span class="spacer"></span>
     <ng-container *ngFor="let k of keys">
       <ng-container *ngIf="menus[k].length > 0">
         <button  mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
         <mat-menu #menu="matMenu">
-              <button mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
+              <button [routerLink]="link.link" mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
         </mat-menu>
       </ng-container>
       <ng-container *ngIf="menus[k].length <= 0">

@@ -16,4 +16,5 @@ export class PortfolioProject {
   };
   frameWorks: string[];
   gallery: string[];
+  anchorImage: string;
 }

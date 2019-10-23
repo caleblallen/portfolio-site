@@ -1,0 +1,9 @@
+$imgHeight: 200px;
+
+.project-title-wrapper {
+  div {
+    min-height: $imgHeight;
+    background-size: cover;
+    border-radius: 0.5em;
+  }
+}
