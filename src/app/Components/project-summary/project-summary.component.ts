@@ -9,7 +9,7 @@ import {PortfolioProject} from '../../Model/PortfolioProject';
 })
 export class ProjectSummaryComponent implements OnInit {
   @Input() project: PortfolioProject;
-  constructor(private pServe: ProjectsService) { }
+  constructor(readonly pServe: ProjectsService) { }
 
   ngOnInit() {
   }

@@ -9,21 +9,18 @@ import { WebLink } from '../../Model/WebLink';
 })
 
 export class TopBarComponent implements OnInit {
-  private menus: {
+  readonly menus: {
     Portfolio: WebLink[];
     Blog: WebLink;
   };
-  private keys: string[];
+  readonly keys: string[];
+
   constructor(private pServe: ProjectsService) {
-  }
-
-
-  ngOnInit() {
 
     this.menus = {
       Portfolio: [],
       Blog: {
-        title: '',
+        title:  '',
         link: '/blog'
       }
     };
@@ -39,6 +36,11 @@ export class TopBarComponent implements OnInit {
     }
 
     this.keys = Object.keys(this.menus);
+  }
+
+
+  ngOnInit() {
+
   }
 
   arrayTest(val) { return Array.isArray(val); }
