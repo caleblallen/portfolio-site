@@ -34,11 +34,11 @@ export class ProjectsService {
           text: 'View on Github'
         },
         frameWorks: ['C#', '.NET', 'jQuery', 'PHP', 'Apache'],
-        gallery: ['assets/img/abstract-002.png',
-                  'assets/img/abstract-003.png',
-                  'assets/img/abstract-004.png',
-                  'assets/img/abstract-005.png'],
-        anchorImage: 'assets/img/atwater-monitor.png'
+        gallery: ['abstract-002.png',
+                  'abstract-003.png',
+                  'abstract-004.png',
+                  'abstract-005.png'],
+        anchorImage: 'atwater-monitor.png'
       }
     };
   }

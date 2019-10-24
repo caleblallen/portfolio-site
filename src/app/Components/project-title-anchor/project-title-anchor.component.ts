@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {PortfolioProject} from '../../Model/PortfolioProject';
+import { PortfolioProject } from '../../Model/PortfolioProject';
+import { Lightbox } from 'ngx-lightbox';
+import { GalleryPhoto } from '../../Model/GalleryPhoto';
 
 @Component({
   selector: 'app-project-title-anchor',
@@ -8,9 +10,25 @@ import {PortfolioProject} from '../../Model/PortfolioProject';
 })
 export class ProjectTitleAnchorComponent implements OnInit {
   @Input() project: PortfolioProject;
-  constructor() { }
+  private photo: GalleryPhoto;
+  constructor(private lightBox: Lightbox) { }
 
   ngOnInit() {
+    this.photo = {
+      src: this.getAnchorImagePath(this.project.anchorImage),
+      caption: `Picture of ${ this.project.title } in action`,
+      thumb: 'assets/img/' + this.project.anchorImage
+    };
+  }
+  private open(): void {
+    this.lightBox.open([this.photo], 0);
+  }
+  private close(): void {
+    // close lightbox programmatically
+    this.lightBox.close();
+  }
+  private getAnchorImagePath(path): string {
+    return 'assets/img/' + path;
   }
 
 }

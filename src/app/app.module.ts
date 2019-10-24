@@ -25,6 +25,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { ProjectTitleAnchorComponent } from './Components/project-title-anchor/project-title-anchor.component';
 import 'hammerjs';
 import { BlogHomeComponent } from './Components/blog-home/blog-home.component';
+import { ProjectGalleryComponent } from './Components/project-gallery/project-gallery.component';
+import { LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { BlogHomeComponent } from './Components/blog-home/blog-home.component';
     IconPillsComponent,
     ProjectTitleAnchorComponent,
     BlogHomeComponent,
+    ProjectGalleryComponent,
+    ProjectGalleryComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +60,8 @@ import { BlogHomeComponent } from './Components/blog-home/blog-home.component';
     MarkdownModule.forRoot(),
     MatListModule,
     MatRippleModule,
-    MatTooltipModule
+    MatTooltipModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

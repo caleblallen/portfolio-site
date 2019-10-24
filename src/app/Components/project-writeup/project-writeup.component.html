@@ -15,21 +15,14 @@
   </ng-container>
   <mat-divider></mat-divider>
 
-  <h4>What I learned</h4>
+  <h4>What I learned:</h4>
   <section class="pl-1em">
 
     <section [innerHTML]="project.postMortem | markdown"></section>
   </section>
   <ng-container *ngIf="project.gallery.length > 0">
     <mat-divider></mat-divider>
-    <h5>Gallery</h5>
-    <section class="pl-1em">
-
-    <section class="gallery-cards">
-      <!--TODO: Lightbox here-->
-      <img *ngFor="let i of project.gallery" [src]="i" />
-    </section>
-    </section>
+    <app-project-gallery [currentProject]="project"></app-project-gallery>
   </ng-container>
 
 
