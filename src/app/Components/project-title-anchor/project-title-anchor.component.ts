@@ -20,14 +20,14 @@ export class ProjectTitleAnchorComponent implements OnInit {
       thumb: 'assets/img/' + this.project.anchorImage
     };
   }
-  private open(): void {
+  open(): void {
     this.lightBox.open([this.photo], 0);
   }
-  private close(): void {
+  close(): void {
     // close lightbox programmatically
     this.lightBox.close();
   }
-  private getAnchorImagePath(path): string {
+  getAnchorImagePath(path): string {
     return 'assets/img/' + path;
   }
 

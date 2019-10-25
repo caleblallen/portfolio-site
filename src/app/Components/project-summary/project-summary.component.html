@@ -9,7 +9,7 @@
       <div class="container" fxLayout="column" fxFlexOrder.lt-md="2" fxFlex="50%" gdAlignColumns>
         <!--TODO: Even though the number of frameworks will always be small, two loops here is painful.-->
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
-          <ng-container *ngIf="index > project.frameWorks.length/2">
+          <ng-container *ngIf="index >= project.frameWorks.length/2">
           <div class="container" fxLayout="column" fxLayoutgap="5px">
             <!-- TODO: Switch Devicons to node_module for more efficiency-->
             <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)" [direction]="'left'"></app-icon-pills></div>
@@ -19,7 +19,7 @@
       </div>
       <div class="container" fxLayout="column" fxFlexOrder.lt-md="1" fxFlex="50%" fxLayoutgap="5px">
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
-          <ng-container *ngIf="index <= project.frameWorks.length/2">
+          <ng-container *ngIf="index < project.frameWorks.length/2">
             <div class="container" fxLayout="column">
               <div fxFlex="50%"><app-icon-pills [text]="f" [icon]="pServe.getFrameworkIcon(f)" [direction]="'right'"></app-icon-pills></div>
             </div>

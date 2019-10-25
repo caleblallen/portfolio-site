@@ -13,7 +13,7 @@ export class ProjectsService {
     this.frameworkIcons = fwIcons.FrameworkIcons;
 
     this.projects = {
-      1: {
+      AtwaterMonitor: {
         title: 'Atwater Monitor',
         description: 'Atwater Monitor is an SNMP Monitoring Program written in C# .NET.',
         designGoals: {
@@ -33,7 +33,14 @@ export class ProjectsService {
           link: 'https://github.com/caleblallen/AtwaterMonitor',
           text: 'View on Github'
         },
-        frameWorks: ['C#', '.NET', 'jQuery', 'PHP', 'Apache'],
+        frameWorks: ['.NET',
+                    'PHP',
+                    'Apache',
+                    'jQuery',
+                    'C#',
+                    'JavaScript',
+                    'Bootstrap',
+                    'Linux'],
         gallery: ['abstract-002.png',
                   'abstract-003.png',
                   'abstract-004.png',

@@ -1,2 +1,1 @@
-ng build --prod --base-href "/beta/" --deploy-url "/beta/" --outputPath "c:\Users\callen\Desktop
-\beta_site"
+ng build --prod --base-href "/beta/" --deploy-url "/beta/" --outputPath "c:\Users\callen\Desktop\beta_site"

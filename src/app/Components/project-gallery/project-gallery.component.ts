@@ -10,7 +10,7 @@ import { GalleryPhoto } from '../../Model/GalleryPhoto';
   styleUrls: ['./project-gallery.component.scss']
 })
 export class ProjectGalleryComponent implements OnInit {
-  private album: GalleryPhoto[];
+  album: GalleryPhoto[];
   @Input() readonly currentProject: PortfolioProject;
 
   constructor(private lightBox: Lightbox) { }
@@ -27,7 +27,6 @@ export class ProjectGalleryComponent implements OnInit {
         thumb: 'assets/img/thumbs/' + f
       };
       this.album.push(photo);
-      console.log(photo);
     }
   }
   open(index: number): void {
