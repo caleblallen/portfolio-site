@@ -1,5 +1,15 @@
-
+@import "src/variables.scss";
 
 .home-wrapper {
   height: 100%;
 }
+.eye-catch {
+  background-color: lightblue;
+  height: 70vh;
+}
+
+.introduction {
+  background-color: $AppBackground;
+  min-height: 30vh;
+}
+

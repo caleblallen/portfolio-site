@@ -1,4 +1,6 @@
 @import '~@angular/material/theming';
+@import "variables.scss";
+
 
 /* You can add global styles to this file, and also import other style files */
 $primary: #7b1fa2;
@@ -13,6 +15,7 @@ font-family: 'Lora', serif;*/
 html, body { height: 100%; }
 body {
   margin: 0;
+  padding: 0 !important;
 }
 
 h1,h2,h3,h4,h5,h6,mat-card-title {
@@ -39,8 +42,14 @@ h1,h2,h3,h4,h5,h6,mat-card-title {
 }
 
 .moon {
-  background-image: url("src/assets/img/full_space_scene.jpg");
+  background-image: url("src/assets/img/space_station.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  //background-position: 105% 110%;
+  //background-size: ;
+  background-position: bottom right;
 }
+
+.content {
+  //background-color: $AppBackgroundNinetyFiveOpacity;
+  //border-radius: 1em;
+}
+
