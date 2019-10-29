@@ -18,15 +18,15 @@ export class SocialMediaLinksComponent implements OnInit {
       },
       {
         icon: 'icon ion-logo-twitch',
-        aria: 'Link to Twitter Account with Twitch logo'
+        aria: 'Link to Twitch Account with Twitch logo'
       },
       {
         icon: 'icon ion-logo-linkedin',
-        aria: 'Link to Twitter Account with LinkedIn Logo'
+        aria: 'Link to LinkedIn Account with LinkedIn Logo'
       },
       {
         icon: 'icon ion-logo-github',
-        aria: 'Link to Twitter Account with Github Logo'
+        aria: 'Link to Github Account with Github Logo'
       },
       {
         icon: 'icon ion-md-mail',

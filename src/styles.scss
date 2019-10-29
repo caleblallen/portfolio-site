@@ -37,3 +37,10 @@ h1,h2,h3,h4,h5,h6,mat-card-title {
   bottom: 5px ;
   right: 5px ;
 }
+
+.moon {
+  background-image: url("src/assets/img/full_space_scene.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  //background-position: 105% 110%;
+}
