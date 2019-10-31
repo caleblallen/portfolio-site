@@ -11,12 +11,20 @@ import { Router } from '@angular/router';
 })
 
 export class TopBarComponent implements OnInit {
-  readonly menus: object;
+  readonly menus: {
+    Home: WebLink;
+    Portfolio: WebLink[];
+    About: WebLink;
+  };
   readonly keys: string[];
 
   constructor(private pServe: ProjectsService, private nav: NavigationService, private router: Router) {
+    this.menus = {
+      Home: null,
+      Portfolio: null,
+      About: null
+    };
 
-    this.menus = {};
     for (const e of this.nav.getBaseRoutes()) {
       if (e.title === 'Portfolio') {
         this.menus[e.title] = [];

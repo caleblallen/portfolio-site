@@ -17,8 +17,6 @@ export class PortfolioProjectComponent implements OnInit {
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.project = this.portfolio.getProject(id.toString());
-    console.log(id);
-    console.log(this.project);
   }
 
 }
