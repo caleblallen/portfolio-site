@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {PortfolioProject} from '../Model/PortfolioProject';
+import { Routes, RouterModule} from '@angular/router';
 import * as fwIcons from '../Configurations/FrameworkIcons';
 
 @Injectable({

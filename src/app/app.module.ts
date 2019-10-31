@@ -27,6 +27,8 @@ import 'hammerjs';
 import { BlogHomeComponent } from './Components/blog-home/blog-home.component';
 import { ProjectGalleryComponent } from './Components/project-gallery/project-gallery.component';
 import { LightboxModule } from 'ngx-lightbox';
+import { AboutPageComponent } from './Components/about-page/about-page.component';
+import { ProjectsPageComponent } from './Components/projects-page/projects-page.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { LightboxModule } from 'ngx-lightbox';
     BlogHomeComponent,
     ProjectGalleryComponent,
     ProjectGalleryComponent,
+    AboutPageComponent,
+    ProjectsPageComponent,
   ],
   imports: [
     BrowserModule,

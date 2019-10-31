@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatButton } from '@angular/material/button';
+import { Router } from '@angular/router';
+import { WebLink } from '../../Model/WebLink';
 
 import * as anime from 'animejs/lib/anime';
 
@@ -16,10 +18,23 @@ export interface Tile {
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
-  constructor() { }
+  public baseRoutes: WebLink[];
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.baseRoutes = [];
+    // Examine all Routes
+    for (const c of this.router.config) {
+      // Omit Routes that have contextual links such as ids.
+      if (!c.path.includes(':')) {
+        this.baseRoutes.push(
+          {
+            title: (c.path === '') ? 'Home' : this.toTitleCase(c.path),
+            link: c.path
+          });
+      }
+    }
+
     anime.timeline({loop: false})
       .add({
         targets: '.welcome',
@@ -42,51 +57,14 @@ export class HomePageComponent implements OnInit {
       easing: 'spring(1, 80, 10, 0)',
       duration: 300
     }, '-=300')      ;
-/*
-
-    anime.timeline({loop: true})
-      .add({
-        targets: '.ml5 .line',
-        opacity: [0.5, 1],
-        scaleX: [0, 1],
-        easing: 'easeInOutExpo',
-        duration: 700
-      }).add({
-      targets: '.ml5 .line',
-      duration: 600,
-      easing: 'easeOutExpo',
-      translateY: (el, i) => (-0.625 + 0.625 * 2 * i) + 'em'
-    })/!*.add({
-      targets: '.ml5 .ampersand',
-      opacity: [0, 1],
-      scaleY: [0.5, 1],
-      easing: 'easeOutExpo',
-      duration: 600,
-      offset: '-=600'
-    })*!/.add({
-      targets: '.ml5 .letters-left',
-      opacity: [0, 1],
-      translateX: ['0.5em', 0],
-      easing: 'easeOutExpo',
-      duration: 600,
-      offset: '-=300'
-    }).add({
-      targets: '.ml5 .letters-right',
-      opacity: [0,1],
-      translateX: ['-0.5em', 0],
-      easing: 'easeOutExpo',
-      duration: 600,
-      offset: '-=600'
-    }).add({
-      targets: '.ml5',
-      opacity: 0,
-      duration: 1000,
-      easing: 'easeOutExpo',
-      delay: 1000
-    });
-*/
-
   }
 
 
+  toTitleCase(str: string) {
+    let collector = '';
+    for (const s of str.split(/[.!?]/)) {
+      collector += s.charAt(0).toUpperCase() + s.substr(1);
+    }
+    return collector;
+  }
 }

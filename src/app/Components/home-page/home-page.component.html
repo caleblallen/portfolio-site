@@ -35,7 +35,7 @@
         <div class="byline"><span>My name Caleb Allen. I solve problems.</span></div>
       </div>
       <div class="container bottom-links" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1em">
-        <div >Portfolio</div> <div >About</div>
+        <button [routerLink]="lnk.link" mat-button *ngFor="let lnk of baseRoutes" color="accent">{{ lnk.title }}</button>
       </div>
     </div>
 
