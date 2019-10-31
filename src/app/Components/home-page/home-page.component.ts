@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { Router } from '@angular/router';
 import { WebLink } from '../../Model/WebLink';
+import { NavigationService } from '../../Services/navigation.service';
 
 import * as anime from 'animejs/lib/anime';
 
@@ -19,21 +19,11 @@ export interface Tile {
 })
 export class HomePageComponent implements OnInit {
   public baseRoutes: WebLink[];
-  constructor(private router: Router) { }
+  constructor(private nav: NavigationService) { }
 
   ngOnInit() {
-    this.baseRoutes = [];
-    // Examine all Routes
-    for (const c of this.router.config) {
-      // Omit Routes that have contextual links such as ids.
-      if (!c.path.includes(':')) {
-        this.baseRoutes.push(
-          {
-            title: (c.path === '') ? 'Home' : this.toTitleCase(c.path),
-            link: c.path
-          });
-      }
-    }
+    this.baseRoutes = this.nav.getBaseRoutes();
+
 
     anime.timeline({loop: false})
       .add({
@@ -60,11 +50,5 @@ export class HomePageComponent implements OnInit {
   }
 
 
-  toTitleCase(str: string) {
-    let collector = '';
-    for (const s of str.split(/[.!?]/)) {
-      collector += s.charAt(0).toUpperCase() + s.substr(1);
-    }
-    return collector;
-  }
+
 }
