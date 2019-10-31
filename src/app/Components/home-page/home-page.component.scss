@@ -11,7 +11,9 @@ $fontColor: #ffffff;
   background-image: url("src/assets/img/full_space_scene.jpg");
   background-position: 60% 75%;
   height: 70vh;
+  transition: background-position 250ms ease-in;
 }
+
 
 .introduction {
   background-color: $AppBackground;
@@ -29,8 +31,10 @@ $fontColor: #ffffff;
 $EyeCatchFontSize: 6em;
 
 .welcome {
+  text-align: right;
   color: $AppBackground;
   span {
+    width:100%;
     font-size: $EyeCatchFontSize;
     text-shadow:
       -2px -2px 0 #fff,
@@ -45,6 +49,7 @@ $EyeCatchFontSize: 6em;
 .welcome-amp {
   color: $AppBackground;
   span {
+    width:100%;
     font-size: $EyeCatchFontSize;
     text-shadow:
       -2px -2px 0 #fff,
@@ -58,6 +63,7 @@ $EyeCatchFontSize: 6em;
 .welcome-message {
   color: $AppBackground;
   span {
+    width:100%;
     font-size: $EyeCatchFontSize;
     //mix-blend-mode: overlay;
     text-shadow:
@@ -73,6 +79,6 @@ $EyeCatchFontSize: 6em;
   height: 17vh;
 }
 
-.home-right {
+/*.home-right {
   float: right;
-}
+}*/

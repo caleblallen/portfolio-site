@@ -1,18 +1,21 @@
-<mat-toolbar color="primary" class="top-bar">
-    <span class="name-bar" routerLink="/">Caleb Allen</span>
-    <span class="spacer"></span>
+<mat-toolbar fxLayout="row" color="primary" class="top-bar">
+    <span fxFlex="25" fxFlex.gt-sm="50" fxHide.lt-md class="name-bar" routerLink="/">Caleb Allen</span>
+    <section fxFlex="75" fxFlex.gt-sm="50" fxLayoutAlign="end">
     <ng-container *ngFor="let k of keys">
       <ng-container *ngIf="arrayTest(menus[k])">
-        <button  mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
+        <button mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
         <mat-menu #menu="matMenu">
-              <button [routerLink]="link.link" mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
+          <button [routerLink]="link.link" mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
         </mat-menu>
       </ng-container>
       <ng-container *ngIf="!arrayTest(menus[k])">
         <ng-container *ngIf="router.url !== '/' || k !== 'Home'">
 
-        <button [routerLink]="menus[k].link" mat-button>{{ k }}</button>
+          <button [routerLink]="menus[k].link" mat-button>{{ k }}</button>
         </ng-container>
       </ng-container>
     </ng-container>
+
+    </section>
+
 </mat-toolbar>

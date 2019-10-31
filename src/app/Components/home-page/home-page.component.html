@@ -1,21 +1,24 @@
 <div fxLayout="column">
-  <div class="eye-catch">
+  <div class="eye-catch"
+       ngStyle.lt-sm="height: 60vh; 'background-position': 10% 0%"
+       ngStyle.gt-md="'background-position': 60% 75%"
+       ngStyle.lt-lg="'background-position': 10% 0%">
     <div fxLayout="column">
       <div fxLayout="row">
-        <div fxFlex="100" class="home-page-spacer"></div>
+        <div fxFlex="100" ngClass.gt-xs="home-page-spacer" ></div>
       </div>
       <div fxLayout="row">
-        <div fxFlexAlign="right right" fxFlex="20" class="welcome ">
-          <span class="home-right">Hello</span>
+        <div ngStyle.lt-md="'text-align': center" fxFlexAlign="center center" fxFlexAlign.gt-sm="right right" fxFlex.gt-sm="20" fxFlex="100" class="welcome ">
+          <span  class="home-right">Hello</span>
         </div>
       </div>
       <div fxLayout="row">
-        <div fxFlexOffset="20" fxFlex="80" class="welcome-amp">
+        <div ngStyle.lt-md="'text-align': center" fxFlexAlign.lt-md="center center" fxFlexOffset.gt-sm="20" fxFlexOffset="0" fxFlex.gt-sm="80" fxFlex="100" class="welcome-amp">
           <span>&amp;</span>
         </div>
       </div>
       <div fxLayout="row">
-        <div fxFlexOffset="24" fxFlex="75" class="welcome-message">
+        <div ngStyle.lt-md="'text-align': center" fxFlexAlign.lt-md="center center" fxFlexOffset="0" fxFlex="0" fxFlexOffset.gt-sm="24" fxFlex.gt-sm="75" class="welcome-message">
           <span>Welcome</span>
         </div>
       </div>
@@ -36,7 +39,7 @@
       </div>
       <div class="container bottom-links" fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1em">
         <ng-container *ngFor="let lnk of baseRoutes">
-          <button *ngIf="lnk.title !== 'Home'" [routerLink]="lnk.link" mat-button color="accent">{{ lnk.title }}</button>
+          <button fxHide.xs *ngIf="lnk.title !== 'Home'" [routerLink]="lnk.link" mat-button color="accent">{{ lnk.title }}</button>
         </ng-container>
       </div>
     </div>

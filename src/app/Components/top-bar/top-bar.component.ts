@@ -18,7 +18,7 @@ export class TopBarComponent implements OnInit {
   };
   readonly keys: string[];
 
-  constructor(private pServe: ProjectsService, private nav: NavigationService, private router: Router) {
+  constructor(private pServe: ProjectsService, private nav: NavigationService, readonly router: Router) {
     this.menus = {
       Home: null,
       Portfolio: null,
