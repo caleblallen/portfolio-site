@@ -1,5 +1,5 @@
 <mat-toolbar fxLayout="row" color="primary" class="top-bar">
-    <span fxFlex="25" fxFlex.gt-sm="50" fxHide.lt-md class="name-bar" routerLink="/">Caleb Allen</span>
+    <span fxFlex="25" fxFlex.gt-sm="50" fxHide.lt-md class="name-bar" routerLink="/">{{ me.name() }}</span>
     <section fxFlex="75" fxFlex.gt-sm="50" fxLayoutAlign="end">
     <ng-container *ngFor="let k of keys">
       <ng-container *ngIf="arrayTest(menus[k])">

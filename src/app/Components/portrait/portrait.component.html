@@ -1,19 +1,17 @@
 <mat-card  ngClass.xs="portrait-card">
   <mat-card-header>
-    <mat-card-title>Caleb Allen</mat-card-title>
-    <mat-card-subtitle>MEAN Stack Developer</mat-card-subtitle>
+    <mat-card-title>{{ me.name() }}</mat-card-title>
+    <mat-card-subtitle>{{ me.descriptor() }}</mat-card-subtitle>
   </mat-card-header>
   <img  mat-card-image class="portrait-img mat-elevation-z2" src="assets/img/portrait_image.png" alt="Photo of Caleb Allen">
   <mat-card-content>
-<!--    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>-->
+<!--    this space intentionally left blank-->
+    <h3>Age: {{ liveAge.toFixed(8) }} years</h3>
+    <h3>Full-Time Employed: {{ liveEmployed.toFixed(8) }} years</h3>
+    <h3>Age of CS Degree: {{ liveDegree.toFixed(8) }} years</h3>
+
   </mat-card-content>
   <mat-card-actions>
-<!--    <button mat-button>LIKE</button>-->
-<!--    <button mat-button>SHARE</button>-->
     <app-social-media-links></app-social-media-links>
   </mat-card-actions>
 </mat-card>

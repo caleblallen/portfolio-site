@@ -3,6 +3,8 @@ import { WebLink } from '../../Model/WebLink';
 import { NavigationService } from '../../Services/navigation.service';
 
 import * as anime from 'animejs/lib/anime';
+import { PersonalInfoService } from '../../Services/personal-info.service';
+
 
 export interface Tile {
   color: string;
@@ -18,7 +20,7 @@ export interface Tile {
 })
 export class HomePageComponent implements OnInit {
   public baseRoutes: WebLink[];
-  constructor(private nav: NavigationService) { }
+  constructor(private nav: NavigationService, public me: PersonalInfoService) { }
 
   ngOnInit() {
     this.baseRoutes = this.nav.getBaseRoutes();
@@ -48,7 +50,5 @@ export class HomePageComponent implements OnInit {
       duration: 600
     }, '-=500')      ;
   }
-
-
 
 }

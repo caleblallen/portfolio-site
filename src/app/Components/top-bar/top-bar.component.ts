@@ -3,6 +3,7 @@ import { ProjectsService } from '../../Services/projects.service';
 import { WebLink } from '../../Model/WebLink';
 import { NavigationService } from '../../Services/navigation.service';
 import { Router } from '@angular/router';
+import { PersonalInfoService } from '../../Services/personal-info.service';
 
 @Component({
   selector: 'app-top-bar',
@@ -18,7 +19,7 @@ export class TopBarComponent implements OnInit {
   };
   readonly keys: string[];
 
-  constructor(private pServe: ProjectsService, private nav: NavigationService, readonly router: Router) {
+  constructor(public me: PersonalInfoService, private pServe: ProjectsService, private nav: NavigationService, readonly router: Router) {
     this.menus = {
       Home: null,
       Portfolio: null,
@@ -50,4 +51,5 @@ export class TopBarComponent implements OnInit {
   ngOnInit() { }
 
   arrayTest(val) { return Array.isArray(val); }
+
 }

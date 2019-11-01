@@ -29,7 +29,8 @@
               "./node_modules/ionicons/dist/css/ionicons.css",
               "src/assets/icons/devicon.scss",
               "src/assets/icons/devicon-colors.scss",
-              "./node_modules/ngx-lightbox/lightbox.css"
+              "./node_modules/ngx-lightbox/lightbox.css",
+              "src/github-calendar-style.scss"
             ],
             "scripts": [
               "node_modules/marked/lib/marked.js"

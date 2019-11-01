@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as GitHubCalendar from 'github-calendar';
 
 @Component({
   selector: 'app-about-details',
@@ -10,6 +11,8 @@ export class AboutDetailsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
+
   }
 
 }
