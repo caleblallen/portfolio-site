@@ -31,6 +31,8 @@ import { AboutPageComponent } from './Components/about-page/about-page.component
 import { PortfolioPageComponent } from './Components/portfolio-page/portfolio-page.component';
 import { AboutDetailsComponent } from './Components/about-details/about-details.component';
 import { GithubCalendarComponent } from './Components/github-calendar/github-calendar.component';
+import { AboutAtAGlanceComponent } from './Components/about-at-a-glance/about-at-a-glance.component';
+import { TextPillComponent } from './Components/text-pill/text-pill.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +54,8 @@ import { GithubCalendarComponent } from './Components/github-calendar/github-cal
     PortfolioPageComponent,
     AboutDetailsComponent,
     GithubCalendarComponent,
+    AboutAtAGlanceComponent,
+    TextPillComponent,
   ],
   imports: [
     BrowserModule,
