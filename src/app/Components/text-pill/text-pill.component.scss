@@ -12,6 +12,7 @@ $pillBorderRadius: 20px;
   border-bottom: 1px solid white;
   .right{
     display:inline-block;
+
     padding: $pillPadding;
     background: linear-gradient(90deg, rgba(122,32,161,1) 0%, rgba(122,32,161,0) 100%);
     border-left: 1px solid white;
