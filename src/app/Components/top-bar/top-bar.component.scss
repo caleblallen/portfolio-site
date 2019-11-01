@@ -12,7 +12,12 @@
   font-size: 2em;
   margin-top: 10px;
   margin-left: 8px;
+  transition: display 1s linear;
   &:hover {
     cursor: pointer;
   }
+}
+
+.top-bar-button {
+  transition: all 3s linear !important;
 }

@@ -3,9 +3,9 @@
 
 
 /* You can add global styles to this file, and also import other style files */
-$primary: #7b1fa2;
-$accent: #69f0ae;
-$warn: #f44336;
+//$primary: #7b1fa2;
+//$accent: #69f0ae;
+//$warn: #f44336;
 
 
 
@@ -53,3 +53,6 @@ h1,h2,h3,h4,h5,h6,mat-card-title {
   //border-radius: 1em;
 }
 
+a {
+  color: $AngularWarn;
+}

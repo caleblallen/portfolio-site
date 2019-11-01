@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatButton } from '@angular/material/button';
 import { WebLink } from '../../Model/WebLink';
 import { NavigationService } from '../../Services/navigation.service';
 
@@ -30,23 +29,24 @@ export class HomePageComponent implements OnInit {
         targets: '.welcome',
         opacity: [0.5, 1],
         scaleY: [0, 1],
-        easing: 'spring(1, 80, 10, 0)',
+        delay: 300,
+        easing: 'spring(1, 80, 10, 10)',
         duration: 600
         })
       .add({
         targets: '.welcome-amp',
         opacity: [0, 1],
         scaleY: [0, 1],
-        easing: 'spring(1, 80, 10, 0)',
-        duration: 700
-      }, '-=300')
+        easing: 'spring(1, 80, 10, 15)',
+        duration: 100
+      }, '-=500')
       .add({
       targets: '.welcome-message',
       opacity: [0.5, 1],
       scaleY: [0, 1],
-      easing: 'spring(1, 80, 10, 0)',
-      duration: 300
-    }, '-=300')      ;
+      easing: 'spring(1, 80, 10, 10)',
+      duration: 600
+    }, '-=500')      ;
   }
 
 

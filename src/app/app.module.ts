@@ -29,6 +29,7 @@ import { ProjectGalleryComponent } from './Components/project-gallery/project-ga
 import { LightboxModule } from 'ngx-lightbox';
 import { AboutPageComponent } from './Components/about-page/about-page.component';
 import { PortfolioPageComponent } from './Components/portfolio-page/portfolio-page.component';
+import { AboutDetailsComponent } from './Components/about-details/about-details.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { PortfolioPageComponent } from './Components/portfolio-page/portfolio-pa
     ProjectGalleryComponent,
     AboutPageComponent,
     PortfolioPageComponent,
+    AboutDetailsComponent,
   ],
   imports: [
     BrowserModule,
