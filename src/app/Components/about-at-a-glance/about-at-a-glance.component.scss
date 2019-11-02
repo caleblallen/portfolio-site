@@ -1,0 +1,17 @@
+.stat-list {
+  width: 100%;
+  mat-list-item {
+    font-size: 1.5em;
+
+    &:not(:last-child) {
+      border-bottom: 1px dashed white;
+    }
+    .timer-label{
+    }
+    .timer {
+      margin-left: auto;
+      text-align: right;
+      display: inline-block;
+    }
+  }
+}

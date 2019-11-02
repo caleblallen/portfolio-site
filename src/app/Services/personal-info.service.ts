@@ -25,7 +25,7 @@ export class PersonalInfoService {
       linkedIn: 'https://www.linkedin.com/in/caleb-allen-066136133/',
       githubAccount: 'caleblallen',
       emailAddress: 'caleb.allen@gmail.com',
-      birthDate: new Date('1987-03-19')
+      birthDate: new Date('1987-03-03')
     };
   }
 
