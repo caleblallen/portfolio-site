@@ -33,6 +33,7 @@ import { AboutDetailsComponent } from './Components/about-details/about-details.
 import { GithubCalendarComponent } from './Components/github-calendar/github-calendar.component';
 import { AboutAtAGlanceComponent } from './Components/about-at-a-glance/about-at-a-glance.component';
 import { TextPillComponent } from './Components/text-pill/text-pill.component';
+import { AboutTechnologySpecificsComponent } from './Components/about-technology-specifics/about-technology-specifics.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { TextPillComponent } from './Components/text-pill/text-pill.component';
     GithubCalendarComponent,
     AboutAtAGlanceComponent,
     TextPillComponent,
+    AboutTechnologySpecificsComponent,
   ],
   imports: [
     BrowserModule,

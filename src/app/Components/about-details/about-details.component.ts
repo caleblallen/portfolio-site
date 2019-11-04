@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as GitHubCalendar from 'github-calendar';
+import { PersonalInfoService } from '../../Services/personal-info.service';
 
 @Component({
   selector: 'app-about-details',
@@ -8,11 +8,18 @@ import * as GitHubCalendar from 'github-calendar';
 })
 export class AboutDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(public me: PersonalInfoService) { }
 
   ngOnInit() {
 
 
   }
 
+  public formatTechnologyEntries(key): string {
+    let accumulator = '';
+    for (const det of this.me.technologySpecifics[key].details) {
+      accumulator += `<span class=""`;
+    }
+    return '';
+  }
 }

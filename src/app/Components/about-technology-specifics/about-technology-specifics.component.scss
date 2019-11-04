@@ -1,0 +1,29 @@
+@import 'src/variables.scss';
+table {
+
+  border-collapse: collapse;
+}
+tr {
+  &:nth-child(even) {
+    background: rgba(255,255,255,.1);
+  }
+  td {
+    padding: 5px 0.5em 5px 0.5em;
+
+    &:first-child{
+      font-size: 1.5em;
+      line-height: 100%;
+    }
+  }
+}
+.tech-dets {
+  display: inline-block;
+  padding: 0 0.5em 0 0;
+  & span:nth-child(odd) {
+    color: $AngularAccent;
+    font-weight: bold;
+  }
+  & span:nth-child(even) {
+
+  }
+}

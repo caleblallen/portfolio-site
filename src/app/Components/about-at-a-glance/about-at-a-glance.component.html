@@ -1,17 +1,18 @@
   <section>
-  <div fxLayout="column" fxLayoutGap="0.2em">
-    <div fxLayout="row" fxLayoutGap="0.2em" fxFlexAlign="space-evenly center">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        Timelines
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
       <mat-list class="stat-list">
         <mat-list-item><span class="timer-label">Alive</span><div class="timer">{{ liveAge.toFixed(8) }} years</div></mat-list-item>
-
         <mat-list-item><span class="timer-label">Employed full-time</span><div class="timer">{{ liveEmployed.toFixed(8) }} years</div></mat-list-item>
         <mat-list-item><span class="timer-label">CS Graduate</span><div class="timer">{{ liveDegree.toFixed(8) }} years</div></mat-list-item>
       </mat-list>
-    </div>
-  </div>
-
-<!--  <div ><h4>...a Computer Science graduate:</h4></div><div fxFlex="25%"><h4>{{ liveDegree.toFixed(8) }} years</h4></div>-->
-<!--  <app-text-pill [left]="'...alive'" [right]="liveAge.toFixed(8) + ' years'"></app-text-pill>-->
+    </mat-card-content>
+  </mat-card>
 </section>
 
 

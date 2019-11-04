@@ -1,8 +1,19 @@
 import { Injectable } from '@angular/core';
 
+export interface TechVersionPair {
+  name: string;
+  version: string;
+}
+
+export interface TechEntry {
+  category: string;
+  details: TechVersionPair[];
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class PersonalInfoService {
   private personalDetails: {
     firstName: string;
@@ -15,6 +26,9 @@ export class PersonalInfoService {
     emailAddress: string;
     birthDate: Date;
   };
+
+  public technologySpecifics: TechEntry[];
+
   constructor() {
     this.personalDetails = {
       firstName: 'Caleb',
@@ -27,6 +41,56 @@ export class PersonalInfoService {
       emailAddress: 'caleb.allen@gmail.com',
       birthDate: new Date('1987-03-03')
     };
+
+    this.technologySpecifics = [
+      {
+        category: 'Languages',
+        details: [
+          {name: 'JavaScript ', version: 'ES6'},
+          {name: 'TypeScript ', version: 'v3.4'},
+          {name: 'Python ', version: 'v2.7 - v3.8'},
+          {name: 'C#.NET ', version: 'v4.8'},
+          {name: 'Java ', version: 'v13'},
+          {name: 'C++ ', version: '\'03 & \'17'},
+          {name: 'PHP ', version: 'v7.1'},
+          {name: 'HTML/CSS/SCSS ', version: 'v5/v3/v3.5.6'},
+        ]
+      },
+      {
+        category: 'Frameworks',
+        details: [
+          {name: 'Angular', version: 'v8'},
+          {name: 'Node.js', version: 'v12'},
+          {name: 'Express.js', version: 'v4.17'},
+          {name: 'jQuery', version: 'v3.3'},
+          {name: 'Bootstrap', version: 'v3-4'}
+        ]
+      },
+      {
+        category: 'Databases',
+        details: [
+          {name: 'MongoDB', version: 'V4.2'},
+          {name: 'MySQL', version: 'v5.7'},
+          {name: 'Transact-SQL', version: '2014'}
+        ]
+      },
+      {
+        category: 'Shells',
+        details: [
+          {name: 'Bash', version: 'v4.3'},
+          {name: 'Powershell', version: 'v5.1'},
+          {name: 'MS-DOS', version: 'v10'}
+        ]
+      },
+      {
+        category: 'Servers',
+        details: [
+          {name: 'Apache', version: 'v2.4'},
+          {name: 'Ubuntu Server', version: 'v18'},
+          {name: 'Windows Server', version: '\'03, \'08, \'12, \'16'}
+        ]
+      }
+    ];
   }
 
   public fractionalAge(date = ''): number {
