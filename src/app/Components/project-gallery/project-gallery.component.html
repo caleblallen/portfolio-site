@@ -1,6 +1,5 @@
 <h3>Gallery:</h3>
 <section fxLayout="row wrap" fxLayoutGap="1vw" class="pl-1em">
-    <!--TODO: Lightbox here-->
     <div *ngFor="let image of album; let i = index">
       <img [src]="image.thumb" (click)="open(i)" />
     </div>
