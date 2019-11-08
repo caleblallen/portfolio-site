@@ -4,7 +4,7 @@ $primary: #7b1fa2;
 $accent: #69f0ae;
 $warn: #f44336;
 $borderRadius: 40px;
-$font-size: 25px;
+$font-size: 20px;
 $height: 26px;
 $spacer: 7px;
 .pill-badge-wrapper {
@@ -15,7 +15,7 @@ $spacer: 7px;
   display: inline-block;
   vertical-align: middle;
   border-radius: $borderRadius;
-  font-size: 0px;
+  font-size: 0;
   border: 1px solid white;
   span {
     font-size: $font-size !important;
