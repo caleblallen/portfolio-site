@@ -5,6 +5,9 @@ import { NavigationService } from '../../Services/navigation.service';
 import * as anime from 'animejs/lib/anime';
 import { PersonalInfoService } from '../../Services/personal-info.service';
 
+import { PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+
 
 export interface Tile {
   color: string;
@@ -20,35 +23,38 @@ export interface Tile {
 })
 export class HomePageComponent implements OnInit {
   public baseRoutes: WebLink[];
-  constructor(private nav: NavigationService, public me: PersonalInfoService) { }
+  readonly isBrowser: boolean;
+  constructor(private nav: NavigationService, public me: PersonalInfoService, ) {
+    this.isBrowser = isPlatformBrowser(PLATFORM_ID);
+    console.log('is browser=', this.isBrowser);
+  }
 
   ngOnInit() {
     this.baseRoutes = this.nav.getBaseRoutes();
 
-
     anime.timeline({loop: false})
-      .add({
-        targets: '.welcome',
-        opacity: [0.5, 1],
-        scaleY: [0, 1],
-        delay: 300,
-        easing: 'spring(1, 80, 10, 10)',
-        duration: 600
+        .add({
+          targets: '.welcome',
+          opacity: [0.5, 1],
+          scaleY: [0, 1],
+          delay: 300,
+          easing: 'spring(1, 80, 10, 10)',
+          duration: 600
         })
-      .add({
-        targets: '.welcome-amp',
-        opacity: [0, 1],
-        scaleY: [0, 1],
-        easing: 'spring(1, 80, 10, 15)',
-        duration: 100
-      }, '-=500')
-      .add({
-      targets: '.welcome-message',
-      opacity: [0.5, 1],
-      scaleY: [0, 1],
-      easing: 'spring(1, 80, 10, 10)',
-      duration: 600
-    }, '-=500')      ;
+        .add({
+          targets: '.welcome-amp',
+          opacity: [0, 1],
+          scaleY: [0, 1],
+          easing: 'spring(1, 80, 10, 15)',
+          duration: 100
+        }, '-=500')
+        .add({
+          targets: '.welcome-message',
+          opacity: [0.5, 1],
+          scaleY: [0, 1],
+          easing: 'spring(1, 80, 10, 10)',
+          duration: 600
+        }, '-=500');
   }
 
 }

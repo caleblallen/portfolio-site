@@ -9,10 +9,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent, data: {animation: 'slideUp'}},
-  { path: 'portfolio', component: PortfolioPageComponent, data: {animation: 'slideUp'}},
-  { path: 'about', component: AboutPageComponent, data: {animation: 'slideUp'}},
-  { path: 'project/:id', component: PortfolioProjectComponent, data: {animation: 'slideUp'}}
+  { path: '', component: HomePageComponent, data: {animation: 'HomePage'}},
+  { path: 'portfolio', component: PortfolioPageComponent, data: {animation: 'OtherPage'}},
+  { path: 'about', component: AboutPageComponent, data: {animation: 'OtherPage'}},
+  { path: 'project/:id', component: PortfolioProjectComponent, data: {animation: 'OtherPage'}}
 ];
 
 @NgModule({

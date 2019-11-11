@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { slideUp } from './route-animations';
+import {slideInAnimation} from './route-animations';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  animations: [slideUp]
+  animations: [ slideInAnimation ]
 })
 export class AppComponent {
   title = 'calebAllenDotCom';
 
   prepareRoute(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData;
-}
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData.animation;
+  }
 }

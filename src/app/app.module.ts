@@ -23,7 +23,7 @@ import { IconPillsComponent } from './Components/icon-pills/icon-pills.component
 import {MatRippleModule} from '@angular/material/core';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { ProjectTitleAnchorComponent } from './Components/project-title-anchor/project-title-anchor.component';
-import 'hammerjs';
+// import 'hammerjs';
 import { BlogHomeComponent } from './Components/blog-home/blog-home.component';
 import { ProjectGalleryComponent } from './Components/project-gallery/project-gallery.component';
 import { LightboxModule } from 'ngx-lightbox';
@@ -60,7 +60,7 @@ import { AboutTechnologySpecificsComponent } from './Components/about-technology
     AboutTechnologySpecificsComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
