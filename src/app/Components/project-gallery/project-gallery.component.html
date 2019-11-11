@@ -1,6 +1,6 @@
 <h3>Gallery:</h3>
 <section fxLayout="row wrap" fxLayoutGap="1vw" class="pl-1em">
     <div *ngFor="let image of album; let i = index">
-      <img [src]="image.thumb" (click)="open(i)" />
+      <img matRipple [matRippleColor]="'black'" [src]="image.thumb" (click)="open(i)" />
     </div>
 </section>

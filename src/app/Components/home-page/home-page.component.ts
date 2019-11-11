@@ -26,13 +26,13 @@ export class HomePageComponent implements OnInit {
   readonly isBrowser: boolean;
   constructor(private nav: NavigationService, public me: PersonalInfoService, ) {
     this.isBrowser = isPlatformBrowser(PLATFORM_ID);
+    console.log('is browser=', this.isBrowser);
   }
 
   ngOnInit() {
     this.baseRoutes = this.nav.getBaseRoutes();
 
-    if (this.isBrowser) {
-      anime.timeline({loop: false})
+    anime.timeline({loop: false})
         .add({
           targets: '.welcome',
           opacity: [0.5, 1],
@@ -55,7 +55,6 @@ export class HomePageComponent implements OnInit {
           easing: 'spring(1, 80, 10, 10)',
           duration: 600
         }, '-=500');
-    }
   }
 
 }

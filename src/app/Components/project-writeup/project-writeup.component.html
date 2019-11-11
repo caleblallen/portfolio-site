@@ -1,5 +1,5 @@
 <section class="project-writeup-wrapper content">
-  <app-project-title-anchor [project]="project"></app-project-title-anchor>
+  <app-project-title-anchor></app-project-title-anchor>
 <!--  <h4>Description:</h4>-->
 
   <ng-container *ngIf="project.designGoals !== null">
@@ -22,7 +22,7 @@
   </section>
   <ng-container *ngIf="project.gallery.length > 0">
     <mat-divider></mat-divider>
-    <app-project-gallery [currentProject]="project"></app-project-gallery>
+    <app-project-gallery></app-project-gallery>
   </ng-container>
 
 

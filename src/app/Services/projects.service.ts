@@ -45,7 +45,8 @@ export class ProjectsService {
         gallery: ['atwater-monitor.png',
           'amonitor_listing.png',
           'amonitor_graph.png'],
-        anchorImage: 'atwater-monitor.png'
+        anchorImage: 'atwater-monitor.png',
+        replit: null
       },
 
 
@@ -60,8 +61,8 @@ export class ProjectsService {
             '...just as easily remove job descriptions from consideration.']
         },
         liveLink: {
-          link: 'https://caleballen.com/reclass_2018/reclass.php',
-          text: 'You may view the  page in action here'
+          link: 'https://tinydragon.dev/SalaryDataVisualizer',
+          text: 'You may view the page in action here'
         },
         // tslint:disable-next-line:max-line-length
         postMortem: 'Most of the work in this project was done in excel with salary comparison and normalization. For the display page I focused on the following:\n\n__Intuitive UI__:One of my goals here was to create a page that worked exactly like a user would expect it to. So when they select a job from the list...it gets added. They don\'t have to think beyond that. If they want an item removed, the click the remove box. I believe I hit upon a really easy to use UI on this project and I\'m proud of that.\n\n__Chart.js__: I worked with [Chart.js](https://www.chartjs.org/) for this project. I learned the quirks and methods of creating and updating a chart for users to interact with. The data on this page was likely more dynamic than Chart.js was really designed for.',
@@ -74,10 +75,10 @@ export class ProjectsService {
           'JavaScript',
           'Bootstrap',
           'Linux'],
-        gallery: ['atwater-monitor.png',
-          'amonitor_listing.png',
-          'amonitor_graph.png'],
-        anchorImage: 'atwater-monitor.png'
+        gallery: ['sdv_chart.png',
+          'sdv_selectors.png'],
+        anchorImage: 'sdv_chart.png',
+        replit: null
       }
 
     };
