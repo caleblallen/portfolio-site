@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatIconModule, MatMenuModule, MatToolbarModule} from '@angular/material';
+import {MatButtonModule, MatExpansionModule, MatIconModule, MatMenuModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
 import { TopBarComponent } from './Components/top-bar/top-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './Components/home-page/home-page.component';
@@ -34,6 +34,7 @@ import { GithubCalendarComponent } from './Components/github-calendar/github-cal
 import { AboutAtAGlanceComponent } from './Components/about-at-a-glance/about-at-a-glance.component';
 import { TextPillComponent } from './Components/text-pill/text-pill.component';
 import { AboutTechnologySpecificsComponent } from './Components/about-technology-specifics/about-technology-specifics.component';
+import { FileAttachmentsComponent } from './Components/file-attachments/file-attachments.component';
 
 @NgModule({
   declarations: [
@@ -58,9 +59,10 @@ import { AboutTechnologySpecificsComponent } from './Components/about-technology
     AboutAtAGlanceComponent,
     TextPillComponent,
     AboutTechnologySpecificsComponent,
+    FileAttachmentsComponent,
   ],
   imports: [
-    BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    BrowserModule.withServerTransition({appId: 'serverApp'}),
     BrowserAnimationsModule,
     MatToolbarModule,
     MatMenuModule,
@@ -75,7 +77,9 @@ import { AboutTechnologySpecificsComponent } from './Components/about-technology
     MatListModule,
     MatRippleModule,
     MatTooltipModule,
-    LightboxModule
+    LightboxModule,
+    MatExpansionModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

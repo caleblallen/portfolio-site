@@ -1,3 +1,6 @@
+import { WebLink } from './WebLink';
+
+
 export class PortfolioProject {
   title: string;
   designGoals: {
@@ -17,5 +20,5 @@ export class PortfolioProject {
   frameWorks: string[];
   gallery: string[];
   anchorImage: string;
-  replit: string;
+  documents: WebLink[];
 }

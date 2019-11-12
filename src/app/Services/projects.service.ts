@@ -46,7 +46,8 @@ export class ProjectsService {
           'amonitor_listing.png',
           'amonitor_graph.png'],
         anchorImage: 'atwater-monitor.png',
-        replit: null
+        documents: []
+
       },
 
 
@@ -78,9 +79,38 @@ export class ProjectsService {
         gallery: ['sdv_chart.png',
           'sdv_selectors.png'],
         anchorImage: 'sdv_chart.png',
-        replit: null
-      }
+        documents: []
 
+      },
+      MarkovGeneratorJava: {
+        title: 'Markov Generator (Java)',
+        // tslint:disable-next-line:max-line-length
+        description: 'This is a Markov Generator that uses random seeds and histograms to generate patterns analogous to human written communication.',
+        designGoals: {
+          // tslint:disable-next-line:max-line-length
+          intro: 'Markov chains predict future results based on the current state and probable next state. This works very well with human speech, which is filled with patterns and boilerplate.\n\nThis generator is currently configured to generate some Tolkien inspired Dwarf and Orc names, along with whole sentences written in the style of Charles Dickens.\n\nThis project had to...',
+          goals: ['...generate 1st, 2nd, and 3rd order Markov chains.',
+            '...produce probabilistic results by following the chains with random seeds.',
+            '...pass the my upper division software development class.']
+        },
+        liveLink: {
+          link: 'https://repl.it/@CalebAllen/Jarkov-Generator',
+          text: 'A link to a live exmaple you may view on repl.it'
+        },
+        // tslint:disable-next-line:max-line-length
+        postMortem: 'Notable lessons from this project:\n\n__Java HashMap__: The heart of this project is a histogram of type: <code>HashMap&lt;String,HashMap&lt;String,Integer&gt;&gt;</code> I\'d worked with python dictionaries, so the learning was mostly syntax.\n\n__Java Generic Types__: This was my first exposure to generic types. Most of my classes were focused on restricting use of advanced data structures in code. That is, afterall, what they were trying to teach. I\'ve worked with them far more since then, but this was my first exposure.',
+        sourceCode: {
+          link: 'https://github.com/caleblallen/jarkov-generator',
+          text: 'View on github'
+        },
+        frameWorks: ['Java'],
+        gallery: ['markov_histogram.png', 'markov_java.png', 'markov_java_breakdown.png'],
+        anchorImage: 'markov_java_breakdown.png',
+        documents: [{
+          title: 'Markov Generator Project Report',
+          link: 'markov_generator_java.pdf'
+        }]
+      }
     };
   }
   getProject(key): PortfolioProject {

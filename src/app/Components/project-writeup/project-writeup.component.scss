@@ -1,6 +1,10 @@
+@import '../../../variables.scss';
+
 .project-writeup-wrapper {
   padding-left: 1em;
   /*border-left: 1px solid rgba(255,87,34,.5)*/
+  padding-bottom: 2em;
+
 }
 
 .gallery-cards {
@@ -28,3 +32,4 @@
 .pl-1em {
   padding-left: 1em;
 }
+

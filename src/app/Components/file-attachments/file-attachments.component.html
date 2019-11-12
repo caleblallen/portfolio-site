@@ -1,0 +1,10 @@
+<ng-container>
+  <h4>Supplemental Documents</h4>
+  <mat-list>
+    <mat-list-item *ngFor="let fp of files">
+      <mat-icon mat-list-icon>cloud_download</mat-icon>
+      <a [download]="fp.link" [href]="'assets/documents/' + fp.link" mat-line>{{ fp.title }}</a>
+    </mat-list-item>
+  </mat-list>
+</ng-container>
+

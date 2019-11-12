@@ -2,15 +2,6 @@
 @import "variables.scss";
 
 
-/* You can add global styles to this file, and also import other style files */
-//$primary: #7b1fa2;
-//$accent: #69f0ae;
-//$warn: #f44336;
-
-
-
-/*font-family: 'Vollkorn', serif;
-font-family: 'Lora', serif;*/
 
 html, body { height: 100%; }
 body {
@@ -19,11 +10,12 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,mat-card-title {
-  font-family: 'Lora', serif !important;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 2px;
 }
 
 * {
-  font-family: 'Vollkorn', serif;
+  font-family: 'Nunito', sans-serif;
 }
 .bounded-row-wrapper{
   display:flex;
@@ -41,24 +33,15 @@ h1,h2,h3,h4,h5,h6,mat-card-title {
   right: 5px ;
 }
 
-/*
-.moon {
-  background-image: url("src/assets/img/space_station.png");
-  background-repeat: no-repeat;
-  //background-size: ;
-  background-position: bottom right;
-}
-*/
-
-.content {
-  //background-color: $AppBackgroundNinetyFiveOpacity;
-  //border-radius: 1em;
-}
-
 a {
   color: $AngularWarn;
 }
 
 .attribution-text {
   font-size: .7em;
+}
+
+strong {
+  color: $AngularAccent;
+  letter-spacing: 2px;
 }
