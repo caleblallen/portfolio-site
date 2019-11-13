@@ -24,10 +24,7 @@ export class ProjectsService {
             'Keep a Rolling Average of Unit Temperatures.',
             'Notify administrators of dangerous temperatures via email alerts.']
         },
-        liveLink: {
-          link: 'http://www.google.com/',
-          text: 'See it Work Live'
-        },
+        liveLink: null,
         // tslint:disable-next-line:max-line-length
         postMortem: 'Here are a few key lessons I took away from this project:\n\n**The C# Programming Language:**  This is the first time I\'ve developed in C#. The actual code was only written after a week of studying the C# language. I worked with Classes, Delegates, Generics, LINQ, Collections, Open Source Libraries, Asynchronous Methods, and OOP Concepts.\n\n**Basic TCP Socket Programming in C#:** System.Net and System.Net.Sockets were utilized here. My goal was to respond to web requests without a true web server running, and this method accomplished that.\n\n**Visual Studio 2019:** The last version of Visual Studio I used was 2005. Learning the improvements and relearning how to debug and step through the code with VS was very valuable.',
         sourceCode: {
@@ -68,7 +65,7 @@ export class ProjectsService {
         // tslint:disable-next-line:max-line-length
         postMortem: 'Most of the work in this project was done in excel with salary comparison and normalization. For the display page I focused on the following:\n\n__Intuitive UI__:One of my goals here was to create a page that worked exactly like a user would expect it to. So when they select a job from the list...it gets added. They don\'t have to think beyond that. If they want an item removed, the click the remove box. I believe I hit upon a really easy to use UI on this project and I\'m proud of that.\n\n__Chart.js__: I worked with [Chart.js](https://www.chartjs.org/) for this project. I learned the quirks and methods of creating and updating a chart for users to interact with. The data on this page was likely more dynamic than Chart.js was really designed for.',
         sourceCode: {
-          link: '--',
+          link: 'https://github.com/caleblallen/Salary-Data-Visualizer',
           text: 'View on Github'
         },
         frameWorks: ['jQuery',
@@ -95,7 +92,7 @@ export class ProjectsService {
         },
         liveLink: {
           link: 'https://repl.it/@CalebAllen/Jarkov-Generator',
-          text: 'A link to a live exmaple you may view on repl.it'
+          text: 'A link to a live example you may view on repl.it'
         },
         // tslint:disable-next-line:max-line-length
         postMortem: 'Notable lessons from this project:\n\n__Java HashMap__: The heart of this project is a histogram of type: <code>HashMap&lt;String,HashMap&lt;String,Integer&gt;&gt;</code> I\'d worked with python dictionaries, so the learning was mostly syntax.\n\n__Java Generic Types__: This was my first exposure to generic types. Most of my classes were focused on restricting use of advanced data structures in code. That is, afterall, what they were trying to teach. I\'ve worked with them far more since then, but this was my first exposure.',

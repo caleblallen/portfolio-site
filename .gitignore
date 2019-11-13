@@ -40,6 +40,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+build-transfer-test-server.bat
 
 # System Files
 .DS_Store

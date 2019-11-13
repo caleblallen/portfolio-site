@@ -14,4 +14,11 @@ export class ProjectSummaryComponent implements OnInit {
   ngOnInit() {
   }
 
+  public viewSourceCode(): void {
+    window.open(this.project.sourceCode.link, '_blank');
+  }
+
+  public viewLiveProject(): void {
+    window.open(this.project.liveLink.link, '_blank');
+  }
 }
