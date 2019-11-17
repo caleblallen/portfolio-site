@@ -3,6 +3,7 @@
 
 .top-bar {
   @include mat-elevation(3);
+  z-index: 5;
 }
 .spacer {
   flex: 1 1 auto;
@@ -10,9 +11,18 @@
 
 .name-bar {
   font-size: 2em;
-  margin-top: 10px;
-  margin-left: 8px;
-  transition: display 1s linear;
+  margin-left: 4px;
+  &:hover {
+    cursor: pointer;
+  }
+  z-index: 10;
+}
+
+.small-screen-name {
+  display: inline-block;
+  height: 1.75em;
+  font-size: 1.75em;
+  line-height: 1.75em;
   &:hover {
     cursor: pointer;
   }

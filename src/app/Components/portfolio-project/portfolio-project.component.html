@@ -2,11 +2,9 @@
      fxLayout
      fxLayout.lt-md="column"
      fxLayoutAlign="center"
-     fxLayoutGap="10px"
+     fxLayoutGap.gt-sm="10px"
      fxLayoutGap.lt-md="0" >
-<!--  <div fxFlex="0%"-->
-<!--       fxFlex.gt-md="10%"></div>-->
-  <div fxFlexOffset="0" fxFlexOffset.gt-md="100px" fxFlex="350px" >
+  <div fxFlexOffset="0" fxFlexOffset.gt-md="100px" fxFlex.gt-sm="350px" >
     <app-project-summary  [project]="project"></app-project-summary>
   </div>
   <div fxFlex="grow">
