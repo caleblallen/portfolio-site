@@ -19,7 +19,10 @@ export class TopBarComponent implements OnInit {
   };
   readonly keys: string[];
 
-  constructor(public me: PersonalInfoService, private pServe: ProjectsService, private nav: NavigationService, readonly router: Router) {
+  constructor(public me: PersonalInfoService,
+              public pServe: ProjectsService,
+              private nav: NavigationService,
+              readonly router: Router) {
     this.menus = {
       Home: null,
       Portfolio: null,
@@ -36,11 +39,17 @@ export class TopBarComponent implements OnInit {
 
     this.keys = Object.keys(this.menus);
 
+    this.pServe.areProjectsLoaded().then( () => {
+      this.populateProjects();
+    });
+
+  }
+
+  populateProjects(): void {
     const projectKeys = Object.keys(this.pServe.projects);
 
     for (const i of projectKeys) {
       const project = this.pServe.getProject(i);
-      // TODO: Refactor so this is a safe reference.
       this.menus.Portfolio.push( {
         title: project.title,
         link: '/project/' + i

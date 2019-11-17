@@ -35,6 +35,9 @@ import { AboutAtAGlanceComponent } from './Components/about-at-a-glance/about-at
 import { TextPillComponent } from './Components/text-pill/text-pill.component';
 import { AboutTechnologySpecificsComponent } from './Components/about-technology-specifics/about-technology-specifics.component';
 import { FileAttachmentsComponent } from './Components/file-attachments/file-attachments.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 @NgModule({
   declarations: [
@@ -79,7 +82,8 @@ import { FileAttachmentsComponent } from './Components/file-attachments/file-att
     MatTooltipModule,
     LightboxModule,
     MatExpansionModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

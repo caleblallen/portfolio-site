@@ -1,5 +1,6 @@
 
 @import '~@angular/material/theming';
+
 $primary: #7b1fa2;
 $accent: #69f0ae;
 $warn: #f44336;
@@ -7,31 +8,40 @@ $borderRadius: 40px;
 $font-size: 20px;
 $height: 26px;
 $spacer: 7px;
+
+
 .pill-badge-wrapper {
   margin: 0 0 5px 0;
   height: $height;
-  padding-bottom: 5px;
+  line-height: $height;
   width: 100%;
   display: inline-block;
   vertical-align: middle;
-  border-radius: $borderRadius;
   font-size: 0;
   border: 1px solid white;
+
   span {
+    display: inline-block;
     font-size: $font-size !important;
-    line-height: $height + 5;
+    line-height: $height;
     height: 100%;
     border-right: 1px dashed white;
-    padding: 0 $spacer 0 $spacer;
+    padding-left: $spacer;
+    padding-right: $spacer;
+    vertical-align: super;
+    position:absolute;
+
   }
   div {
+    display: inline-block;
     font-size: $font-size !important;
     height: $height;
-    //line-height: $height/4;
     display: inline-block;
     padding: 0 $spacer 0 $spacer;
-    line-height: 34px;
+    line-height: $height;
     vertical-align: text-bottom;
+    position: absolute;
+    left: 2em;
   }
   &:hover{
     cursor: pointer;

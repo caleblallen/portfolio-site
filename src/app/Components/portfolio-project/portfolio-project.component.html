@@ -4,8 +4,13 @@
      fxLayoutAlign="center"
      fxLayoutGap="10px"
      fxLayoutGap.lt-md="0" >
-  <div fxFlex="0%" fxFlex.gt-md="10%"></div>
-  <div fxFlex="40%" fxFlex.gt-md="25%" fxFlex.gt-lg="20%" ><app-project-summary  [project]="project"></app-project-summary></div>
-  <div fxFlex="60%" fxFlex.gt-md="60%" fxFlex.gt-lg="65%"><app-project-writeup [project]="project"></app-project-writeup></div>
-  <div fxFlex="0%" fxFlex.gt-md="10%"></div>
+<!--  <div fxFlex="0%"-->
+<!--       fxFlex.gt-md="10%"></div>-->
+  <div fxFlexOffset="0" fxFlexOffset.gt-md="100px" fxFlex="350px" >
+    <app-project-summary  [project]="project"></app-project-summary>
+  </div>
+  <div fxFlex="grow">
+    <app-project-writeup [project]="project"></app-project-writeup>
+  </div>
+  <div fxFlex="0" fxFlex.gt-md="100px"></div>
 </div>

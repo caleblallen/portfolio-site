@@ -18,12 +18,38 @@
 import 'zone.js/dist/zone-node';
 
 import * as express from 'express';
+import * as http from 'http';
+import * as https from 'https';
 import {join} from 'path';
+import { environment } from './src/environments/environment';
+import * as fs from 'fs';
+
+const env = environment;
+
+let credentials = null;
+
+try {
+  if (fs.existsSync(env.certificate.key)) {
+    credentials = {
+      key: fs.readFileSync(env.certificate.key),
+      cert: fs.readFileSync(env.certificate.cert),
+      minVersion: 'TLSv1.2',
+      maxVersion: 'TLSv1.3'
+    };
+  } else {
+    console.log(`Could not read file at ${ env.certificate.key }`);
+  }
+} catch (err) {
+  console.error(err.message);
+}
+
+
+
 
 // Express server
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || env.port;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
@@ -52,7 +78,15 @@ app.get('*', (req, res) => {
   res.render('index', { req });
 });
 
-// Start up the Node server
-app.listen(PORT, () => {
-  console.log(`Node Express server listening on http://localhost:${PORT}`);
-});
+// TODO: Check for produciton enviroment. FileReplacement in angular.json is not switching to production environment during build.
+if ( credentials !== null) {
+  const httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(PORT, () => {
+    console.log(`Node Express server listening on port ${ PORT }`);
+  });
+} else {
+  const httpServer = http.createServer(app);
+  httpServer.listen(PORT, () => {
+    console.log(`Node Express server listening on port ${ PORT }`);
+  });
+}
