@@ -3,15 +3,15 @@
 $darkColor: #402d2d;
 $fontColor: #ffffff;
 
+$gridSize: calc(100vmax / 60);
+
 .home-wrapper {
   height: 100%;
 }
 .eye-catch {
   z-index: -1 !important;
-  background-image: url("src/assets/img/full_space_scene.jpg");
-  background-position: 60% 75%;
-  height: 70vh;
-  transition: background-position 250ms ease-in;
+  width: 100vw;
+  overflow: hidden;
 }
 
 
