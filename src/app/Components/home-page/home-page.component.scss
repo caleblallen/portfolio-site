@@ -2,7 +2,10 @@
 @import "src/variables.scss";
 $darkColor: #402d2d;
 $fontColor: #ffffff;
-
+$left-offset: 29px;
+$clip-height: 50px;
+$line-height: $clip-height - 5px;
+$total-lines: 1;
 $gridSize: calc(100vmax / 60);
 
 .home-wrapper {
@@ -84,7 +87,3 @@ $EyeCatchFontSize: 6em;
     text-align: center;
   }
 }
-
-/*.home-right {
-  float: right;
-}*/

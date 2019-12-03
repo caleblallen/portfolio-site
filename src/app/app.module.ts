@@ -36,6 +36,7 @@ import { TextPillComponent } from './Components/text-pill/text-pill.component';
 import { AboutTechnologySpecificsComponent } from './Components/about-technology-specifics/about-technology-specifics.component';
 import { FileAttachmentsComponent } from './Components/file-attachments/file-attachments.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HomepageDoodleComponent } from './Components/homepage-doodle/homepage-doodle.component';
 
 
 
@@ -63,6 +64,7 @@ import { HttpClientModule } from '@angular/common/http';
     TextPillComponent,
     AboutTechnologySpecificsComponent,
     FileAttachmentsComponent,
+    HomepageDoodleComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
