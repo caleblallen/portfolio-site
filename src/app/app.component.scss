@@ -6,14 +6,12 @@
 
 body {
   padding: 5px;
-  height: unset;
-  min-height:100%;
 }
 
 .spacer {
   flex: 1 1 auto;
 }
 
-.space-background {
+header {
+  z-index: 1 !important;
 }
-

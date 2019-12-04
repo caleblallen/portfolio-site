@@ -27,11 +27,11 @@ export class HomepageDoodleComponent implements OnInit, AfterViewInit {
       });
     }
   }
-
+//             @grid:  10x60 / 100vmax 30vmax;
   private updateDoodle(doodle, hue): number {
     doodle.update(
       `:doodle {
-            @grid:  9x60 / 100vmax 30vmax;
+            @grid:  14x40 / 100vmax 35vmax;
             background: ${ this.appBackground };
           }
           transition: .6s @r(1s);

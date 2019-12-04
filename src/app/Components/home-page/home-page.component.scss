@@ -28,7 +28,7 @@ $gridSize: calc(100vmax / 60);
 
 .introduction {
   background-color: $AppBackground;
-  min-height: 30vh;
+  //min-height: 30vh;
   padding-top: 3em;
   .byline {
     font-size: 1.4em;
@@ -91,6 +91,7 @@ $EyeCatchFontSize: 6em;
 }
 
 .introduction {
+
   .container {
     text-align: center;
   }

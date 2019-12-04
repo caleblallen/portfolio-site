@@ -1,8 +1,14 @@
 @import '~@angular/material/theming';
 @import 'src/theme.scss';
 
+::ng-deep {
+  .mat-toolbar {
+    z-index: 5 !important;
+    margin-bottom: 50px;
+  }
+}
 .top-bar {
-  @include mat-elevation(3);
+  //@include mat-elevation(3);
   z-index: 5;
 }
 .spacer {
