@@ -1,5 +1,5 @@
 @import '~@angular/material/theming';
-
+@import 'src/theme.scss';
 
 .top-bar {
   @include mat-elevation(3);
@@ -10,7 +10,7 @@
 }
 
 .name-bar {
-  font-family: 'Bebas Neue', cursive !important;
+  font-family: $caleb-banner-font !important;
   font-size: 2em;
   margin-left: 4px;
   &:hover {
@@ -39,8 +39,9 @@
 ::ng-deep{
   .strangeButton {
     span{
-
-    font-family: 'Bebas Neue', cursive !important;
+      font-family: $caleb-banner-font !important;
+      letter-spacing: 2px;
+      font-size: 1.5em;
     }
   }
 }
