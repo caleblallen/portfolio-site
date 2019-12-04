@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
-@import "variables.scss";
-
+//@import "variables.scss";
+@import 'src/theme.scss';
 
 
 html, body { height: 100%; }
@@ -10,12 +10,13 @@ body {
 }
 
 h1,h2,h3,h4,h5,h6,mat-card-title {
-  font-family: 'Roboto', sans-serif;
+  //font-family: 'Roboto', sans-serif;
+  font-family: $caleb-banner-font !important;
   letter-spacing: 2px;
 }
 
 * {
-  font-family: 'Nunito', sans-serif;
+  font-family: $caleb-body-font;
 }
 .bounded-row-wrapper{
   display:flex;
@@ -34,7 +35,7 @@ h1,h2,h3,h4,h5,h6,mat-card-title {
 }
 
 a {
-  color: $AngularWarn;
+  color: mat-color($caleb-warn);
 }
 
 .attribution-text {
@@ -42,6 +43,7 @@ a {
 }
 
 strong {
-  color: $AngularAccent;
+  color: mat-color($caleb-accent);
   letter-spacing: 2px;
 }
+

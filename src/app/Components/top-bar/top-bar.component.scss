@@ -10,6 +10,7 @@
 }
 
 .name-bar {
+  font-family: 'Bebas Neue', cursive !important;
   font-size: 2em;
   margin-left: 4px;
   &:hover {
@@ -30,4 +31,16 @@
 
 .top-bar-button {
   transition: all 3s linear !important;
+}
+//
+//button {
+//  font-family: 'Bebas Neue', cursive !important;
+//}
+::ng-deep{
+  .strangeButton {
+    span{
+
+    font-family: 'Bebas Neue', cursive !important;
+    }
+  }
 }

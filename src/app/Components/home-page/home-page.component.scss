@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
-@import "src/variables.scss";
+@import 'src/theme.scss';
+
+/*@mixin angular-material-theme($caleb-theme) {
+
+}*/
+
+$AppBackground: mat-color($caleb-foreground);
+$AngularAccent: mat-color($caleb-accent);
+
 $darkColor: #402d2d;
 $fontColor: #ffffff;
 $left-offset: 29px;
@@ -87,3 +95,4 @@ $EyeCatchFontSize: 6em;
     text-align: center;
   }
 }
+//@import "src/variables.scss";

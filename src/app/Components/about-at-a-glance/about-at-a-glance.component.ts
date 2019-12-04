@@ -10,7 +10,11 @@ export class AboutAtAGlanceComponent implements OnInit {
   public liveAge: number;
   public liveEmployed: number;
   public liveDegree: number;
-  constructor(public me: PersonalInfoService) { }
+  constructor(public me: PersonalInfoService) {
+    this.liveAge = 0;
+    this.liveEmployed = 0;
+    this.liveDegree = 0;
+  }
 
   ngOnInit() {
     setInterval( () => {

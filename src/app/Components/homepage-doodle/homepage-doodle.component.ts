@@ -10,8 +10,10 @@ import * as ddl from 'css-doodle';
 })
 export class HomepageDoodleComponent implements OnInit, AfterViewInit {
   readonly isBrowser: boolean;
+  readonly appBackground: string;
   constructor(@Inject(PLATFORM_ID) platformId) {
     this.isBrowser = isPlatformBrowser(platformId);
+    this.appBackground = '#fafafa';
   }
 
   ngOnInit(): void {
@@ -26,36 +28,31 @@ export class HomepageDoodleComponent implements OnInit, AfterViewInit {
     }
   }
 
-  private runDoodle() {
+  private updateDoodle(doodle, hue): number {
+    doodle.update(
+      `:doodle {
+            @grid:  9x60 / 100vmax 30vmax;
+            background: ${ this.appBackground };
+          }
+          transition: .6s @r(1s);
+          --hue: calc( ${ hue % 240 } + .5 * @row() * @col());
+          background: hsla(var(--hue),50%, 70%, @r(.1, .9));
+          clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%'))`);
+
+    return hue + 30;
+  }
+
+  private runDoodle(): void {
     const doodle: ddl.Doodle = document.querySelector('css-doodle');
 
     let hue = Math.floor(Math.random() * 240);
 
-    doodle.update(
-      `:doodle {
-            @grid:  9x60 / 100vmax 30vmax;
-            background: #EBF2FA;
-          }
-          transition: .6s @r(1s);
-          --hue: calc( ${ hue % 240 } + .5 * @row() * @col());
-          background: hsla(var(--hue),50%, 70%, @r(.1, .9));
-          clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%'))`);
+    hue = this.updateDoodle(doodle, hue);
 
-    hue += 30;
+
 
     setInterval( () => {
-
-      doodle.update(
-        `:doodle {
-            @grid:  9x60 / 100vmax 30vmax;
-            background: #EBF2FA;
-          }
-          transition: .6s @r(1s);
-          --hue: calc( ${ hue % 240 } + .5 * @row() * @col());
-          background: hsla(var(--hue),50%, 70%, @r(.1, .9));
-          clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%'))`);
-
-      hue += 30;
+      hue = this.updateDoodle(doodle,hue);
     }, 2000);
 
   }

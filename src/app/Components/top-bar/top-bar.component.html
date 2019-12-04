@@ -9,13 +9,13 @@
         <ng-container *ngIf="pServe.areProjectsLoaded() | async">
           <ng-container *ngFor="let k of keys">
             <ng-container *ngIf="arrayTest(menus[k])">
-              <button mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
+              <button class="strangeButton" mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
               <mat-menu fxHide #menu="matMenu">
                 <button [routerLink]="link.link" mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
               </mat-menu>
             </ng-container>
             <ng-container *ngIf="!arrayTest(menus[k])">
-              <button [routerLink]="menus[k].link" mat-button>{{ k }}</button>
+              <button class="strangeButton" [routerLink]="menus[k].link" mat-button>{{ k }}</button>
             </ng-container>
           </ng-container>
         </ng-container>

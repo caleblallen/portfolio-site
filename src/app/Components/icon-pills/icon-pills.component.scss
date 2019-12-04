@@ -1,9 +1,8 @@
 
 @import '~@angular/material/theming';
+@import 'src/theme.scss';
 
-$primary: #7b1fa2;
-$accent: #69f0ae;
-$warn: #f44336;
+$structureColor: $caleb-text;
 $borderRadius: 40px;
 $font-size: 20px;
 $height: 26px;
@@ -18,14 +17,14 @@ $spacer: 7px;
   display: inline-block;
   vertical-align: middle;
   font-size: 0;
-  border: 1px solid white;
+  border: 1px solid $structureColor;
 
   span {
     display: inline-block;
     font-size: $font-size !important;
     line-height: $height;
     height: 100%;
-    border-right: 1px dashed white;
+    border-right: 1px dashed $structureColor;
     padding-left: $spacer;
     padding-right: $spacer;
     vertical-align: super;
@@ -45,7 +44,7 @@ $spacer: 7px;
   }
   &:hover{
     cursor: pointer;
-    @include mat-elevation(2, #ffffff, 1)
+    @include mat-elevation(2);
   }
 }
 
