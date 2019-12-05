@@ -44,6 +44,7 @@ import { AboutTechnologySpecificsComponent } from './Components/about-technology
 import { FileAttachmentsComponent } from './Components/file-attachments/file-attachments.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageDoodleComponent } from './Components/homepage-doodle/homepage-doodle.component';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -71,6 +72,7 @@ import { HomepageDoodleComponent } from './Components/homepage-doodle/homepage-d
     AboutTechnologySpecificsComponent,
     FileAttachmentsComponent,
     HomepageDoodleComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),

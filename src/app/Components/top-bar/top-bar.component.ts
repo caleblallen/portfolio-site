@@ -30,7 +30,9 @@ export class TopBarComponent implements OnInit {
     };
 
     for (const e of this.nav.getBaseRoutes()) {
-      if (e.title === 'Portfolio') {
+      if (e.title === '**') {
+        continue;
+      } else if (e.title === 'Portfolio') {
         this.menus[e.title] = [];
       } else {
         this.menus[e.title] = e;

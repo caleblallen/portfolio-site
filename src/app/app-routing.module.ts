@@ -7,12 +7,14 @@ import { AboutPageComponent } from './Components/about-page/about-page.component
 import { PortfolioPageComponent } from './Components/portfolio-page/portfolio-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent, data: {animation: 'HomePage'}},
   {path: 'portfolio', component: PortfolioPageComponent, data: {animation: 'OtherPage'}},
   {path: 'about', component: AboutPageComponent, data: {animation: 'OtherPage'}},
-  {path: 'project/:id', component: PortfolioProjectComponent, data: {animation: 'OtherPage'}}
+  {path: 'project/:id', component: PortfolioProjectComponent, data: {animation: 'OtherPage'}},
+  {path: '**', component: PageNotFoundComponent, data: {animation: 'OtherPage'}},
 ];
 
 @NgModule({
