@@ -1,4 +1,5 @@
-@import '../../../variables.scss';
+@import 'src/theme.scss';
+
 
 .project-writeup-wrapper {
   padding-left: 1em;
@@ -15,6 +16,7 @@
 }
 
 .gallery-cards img {
+  border: 1px solid $caleb-text;
   max-width: 30%;
   margin-bottom: 2vh;
 }
@@ -22,6 +24,7 @@
 .mb-5 {
   margin-bottom: 5px;
 }
+
 .mb-1em {
   margin-bottom: 1em;
 }
@@ -29,6 +32,7 @@
 .pl-3em {
   padding-left: 3em;
 }
+
 .pl-1em {
   padding-left: 1em;
 }

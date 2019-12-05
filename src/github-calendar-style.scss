@@ -1,11 +1,13 @@
-@import 'src/variables.scss';
+//@import 'src/variables.scss';
+@import 'src/theme.scss';
+
 $fSizeCalendar: 10px;
 $fSizeSmall: 12px;
 $fSizeMedium: 16px;
 $fSizeLarge: 24px;
 $fSizeContrib: 11px;
 .calendar {
-  border: 1px solid $AngularWarn;
+  border: 1px solid mat-color($caleb-warn);
   border-radius: 3px;
   min-height: 243px;
   text-align: center;
@@ -15,11 +17,12 @@ $fSizeContrib: 11px;
 .calendar-graph {
   text.wday {
     font-size: $fSizeCalendar !important;
-    fill: $AngularAccent;
+    fill: mat-color($caleb-accent);
   }
+
   text.month {
     font-size: $fSizeCalendar !important;
-    fill: $AngularAccent;
+    fill: mat-color($caleb-accent);
   }
 }
 
@@ -29,6 +32,7 @@ $fSizeContrib: 11px;
   padding: 0 14px 10px 0;
   display: inline-block;
   float: right;
+
   .text-gray {
     font-size: $fSizeMedium !important;
   }
@@ -62,8 +66,8 @@ $fSizeContrib: 11px;
 .contrib-column {
   padding: 15px 0;
   text-align: center;
-  border-left: 1px solid $AngularWarn;
-  border-top: 1px solid $AngularWarn;
+  border-left: 1px solid mat-color($caleb-warn);
+  border-top: 1px solid mat-color($caleb-warn);
   font-size: 11px;
 
   .text-muted {
@@ -88,7 +92,7 @@ $fSizeContrib: 11px;
   line-height: 1.3em;
   font-size: $fSizeLarge;
   display: block;
-  color: $AngularAccent;
+  color: mat-color($caleb-accent);
 }
 
 .calendar img.spinner {
@@ -124,10 +128,12 @@ $fSizeContrib: 11px;
   margin-left: 9px;
   color: #767676;
 }
+
 .left.text-muted a {
   color: #4078c0;
   text-decoration: none;
 }
+
 .left.text-muted a:hover,
 .monospace a:hover {
   text-decoration: underline;
@@ -141,6 +147,7 @@ h2.f4.text-normal.mb-3 {
   font-size: $fSizeMedium;
   float: left;
 }
-#user-activity-overview{
-  display:none;
+
+#user-activity-overview {
+  display: none;
 }

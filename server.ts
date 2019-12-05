@@ -20,7 +20,7 @@ import 'zone.js/dist/zone-node';
 import * as express from 'express';
 import * as http from 'http';
 import * as https from 'https';
-import {join} from 'path';
+import { join } from 'path';
 import { environment } from './src/environments/environment';
 import * as fs from 'fs';
 
@@ -74,11 +74,34 @@ app.get('*.*', express.static(DIST_FOLDER, {
 }));
 
 // All regular routes use the Universal engine
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index', { req });
 });
 
-// TODO: Check for produciton enviroment. FileReplacement in angular.json is not switching to production environment during build.
+// All regular routes use the Universal engine
+app.get('/#/*', (req, res) => {
+  res.render('index', { req });
+});
+
+// All regular routes use the Universal engine
+app.get('/*', (req, res) => {
+  let newUrl = '';
+  if (req.secure) {
+    newUrl += 'https://';
+  } else {
+    newUrl += 'http://';
+  }
+
+  newUrl += `${ req.get('host') }/#${ req.originalUrl }`;
+
+  res.writeHead(302, {
+    Location: newUrl
+  });
+  res.end();
+});
+
+
+// TODO: Check for production environment. FileReplacement in angular.json is not switching to production environment during build.
 if ( credentials !== null) {
   const httpsServer = https.createServer(credentials, app);
   httpsServer.listen(PORT, () => {

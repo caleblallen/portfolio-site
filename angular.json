@@ -24,7 +24,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/theme.scss",
               "src/styles.scss",
               "./node_modules/ionicons/dist/css/ionicons.css",
               "src/assets/icons/devicon.scss",
@@ -97,7 +97,7 @@
               "src/assets"
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/purple-green.css",
+              "src/theme.scss",
               "src/styles.css"
             ],
             "scripts": []

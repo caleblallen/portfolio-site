@@ -1,8 +1,12 @@
+@import 'src/theme.scss';
+
 $imgHeight: 200px;
 
 .project-title-wrapper {
   position: relative;
+
   div {
+    border: 1px solid $caleb-text;
     min-height: $imgHeight;
     background-size: cover;
     border-radius: 0.5em;

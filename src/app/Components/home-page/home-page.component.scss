@@ -1,5 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
-@import "src/variables.scss";
+@import 'src/theme.scss';
+
+/*@mixin angular-material-theme($caleb-theme) {
+
+}*/
+
+$AppBackground: mat-color($caleb-foreground);
+$AngularAccent: mat-color($caleb-accent);
+
 $darkColor: #402d2d;
 $fontColor: #ffffff;
 $left-offset: 29px;
@@ -11,6 +19,7 @@ $gridSize: calc(100vmax / 60);
 .home-wrapper {
   height: 100%;
 }
+
 .eye-catch {
   z-index: -1 !important;
   width: 100vw;
@@ -20,10 +29,12 @@ $gridSize: calc(100vmax / 60);
 
 .introduction {
   background-color: $AppBackground;
-  min-height: 30vh;
+  //min-height: 30vh;
   padding-top: 3em;
+
   .byline {
     font-size: 1.4em;
+
     strong {
       color: $AngularAccent;
       letter-spacing: 2px;
@@ -36,45 +47,45 @@ $EyeCatchFontSize: 6em;
 .welcome {
   text-align: right;
   color: $AppBackground;
+
   span {
-    width:100%;
+    width: 100%;
     font-size: $EyeCatchFontSize;
-    text-shadow:
-      -2px -2px 0 #fff,
-      2px -2px 0 #fff,
-      -2px 2px 0 #fff,
-      2px 2px 0 #fff,
-      6px 6px 0 #000;
+    text-shadow: -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff,
+    6px 6px 0 #000;
 
   }
 }
 
 .welcome-amp {
   color: $AppBackground;
+
   span {
-    width:100%;
+    width: 100%;
     font-size: $EyeCatchFontSize;
-    text-shadow:
-      -2px -2px 0 #fff,
-      2px -2px 0 #fff,
-      -2px 2px 0 #fff,
-      2px 2px 0 #fff,
-      6px 6px 0 #000;
+    text-shadow: -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff,
+    6px 6px 0 #000;
   }
 }
 
 .welcome-message {
   color: $AppBackground;
+
   span {
-    width:100%;
+    width: 100%;
     font-size: $EyeCatchFontSize;
     //mix-blend-mode: overlay;
-    text-shadow:
-      -2px -2px 0 #fff,
-      2px -2px 0 #fff,
-      -2px 2px 0 #fff,
-      2px 2px 0 #fff,
-      6px 6px 0 #000;
+    text-shadow: -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff,
+    6px 6px 0 #000;
   }
 }
 
@@ -83,7 +94,10 @@ $EyeCatchFontSize: 6em;
 }
 
 .introduction {
+
   .container {
     text-align: center;
   }
 }
+
+//@import "src/variables.scss";

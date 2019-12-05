@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-text-pill',
@@ -8,7 +8,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class TextPillComponent implements OnInit {
   @Input() public left: string;
   @Input() public right: string;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

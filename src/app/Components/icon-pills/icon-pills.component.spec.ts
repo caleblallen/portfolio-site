@@ -8,9 +8,9 @@ describe('IconPillsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IconPillsComponent ]
+      declarations: [IconPillsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

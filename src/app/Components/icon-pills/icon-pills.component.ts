@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-icon-pills',
@@ -9,7 +9,9 @@ export class IconPillsComponent implements OnInit {
   @Input() text: string;
   @Input() icon: string;
   @Input() direction: string;
-  constructor() {}
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

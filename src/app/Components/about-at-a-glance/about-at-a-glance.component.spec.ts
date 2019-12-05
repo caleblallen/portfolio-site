@@ -8,9 +8,9 @@ describe('AboutAtAGlanceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AboutAtAGlanceComponent ]
+      declarations: [AboutAtAGlanceComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

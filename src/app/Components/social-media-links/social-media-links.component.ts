@@ -9,7 +9,9 @@ import { PersonalInfoService } from '../../Services/personal-info.service';
 })
 export class SocialMediaLinksComponent implements OnInit {
   socialMedia: SocialMediaLink[];
-  constructor(public me: PersonalInfoService) { }
+
+  constructor(public me: PersonalInfoService) {
+  }
 
   ngOnInit() {
     this.socialMedia = [

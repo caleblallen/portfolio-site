@@ -1,21 +1,21 @@
 <ng-container>
-  <mat-toolbar class="top-bar" fxLayout="column" color="primary">
-    <mat-toolbar-row fxHide.gt-sm fxLayout="row" fxLayoutAlign="center center" color="primary" >
-      <span fxFlex="200px" class="name-bar" routerLink="/">{{ me.name() }}</span>
+  <mat-toolbar class="mat-elevation-z1" color="primary" fxLayout="column">
+    <mat-toolbar-row color="primary" fxHide.gt-sm fxLayout="row" fxLayoutAlign="center center">
+      <span class="name-bar" routerLink="/">{{ me.name() }}</span>
     </mat-toolbar-row>
-    <mat-toolbar-row fxLayout="row" >
-      <span fxFlex="25" fxFlex.gt-sm="50" fxHide.lt-md class="name-bar" routerLink="/">{{ me.name() }}</span>
-      <section fxFlex="100" fxFlex.gt-sm="50" fxLayoutAlign.gt-sm="end" fxLayoutAlign="space-evenly">
+    <mat-toolbar-row fxLayout="row">
+      <span class="name-bar" fxFlex="25" fxFlex.gt-sm="50" fxHide.lt-md routerLink="/">{{ me.name() }}</span>
+      <section fxFlex="100" fxFlex.gt-sm="50" fxLayoutAlign="space-evenly" fxLayoutAlign.gt-sm="end">
         <ng-container *ngIf="pServe.areProjectsLoaded() | async">
           <ng-container *ngFor="let k of keys">
             <ng-container *ngIf="arrayTest(menus[k])">
-              <button mat-button [matMenuTriggerFor]="menu">{{ k }}</button>
-              <mat-menu fxHide #menu="matMenu">
-                <button [routerLink]="link.link" mat-menu-item *ngFor="let link of menus[k]"> {{ link.title }}</button>
+              <button [matMenuTriggerFor]="menu" class="strangeButton" mat-button>{{ k }}</button>
+              <mat-menu #menu="matMenu" fxHide>
+                <button *ngFor="let link of menus[k]" [routerLink]="link.link" mat-menu-item> {{ link.title }}</button>
               </mat-menu>
             </ng-container>
             <ng-container *ngIf="!arrayTest(menus[k])">
-              <button [routerLink]="menus[k].link" mat-button>{{ k }}</button>
+              <button [routerLink]="menus[k].link" class="strangeButton" mat-button>{{ k }}</button>
             </ng-container>
           </ng-container>
         </ng-container>

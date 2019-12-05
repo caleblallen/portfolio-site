@@ -8,9 +8,9 @@ describe('HomepageDoodleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomepageDoodleComponent ]
+      declarations: [HomepageDoodleComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

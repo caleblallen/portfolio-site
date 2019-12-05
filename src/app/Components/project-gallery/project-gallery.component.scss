@@ -1,6 +1,11 @@
+@import 'src/theme.scss';
+
 img {
   margin: 10px 0 0 0;
   max-width: 90%;
+  border: 1px solid $caleb-text;
+  border-radius: 0.5em;
+
   &:hover {
     cursor: pointer;
     transform: scale(1.02);

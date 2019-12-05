@@ -1,16 +1,16 @@
-<section class="project-writeup-wrapper content">
+<section class="project-writeup-wrapper content"  *ngIf="portfolio.areProjectsLoaded() | async">
   <app-project-title-anchor></app-project-title-anchor>
-<!--  <h4>Description:</h4>-->
+  <!--  <h4>Description:</h4>-->
 
   <ng-container *ngIf="project.designGoals !== null">
     <h4>Design Goals:</h4>
     <section class="pl-1em">
 
-    <span [innerHTML]="project.designGoals.intro | markdown"></span>
+      <span [innerHTML]="project.designGoals.intro | markdown"></span>
 
-    <ng-container *ngFor="let g of project.designGoals.goals">
-      <p class="pl-3em"><i class="icon ion-md-arrow-forward"></i><span class="pl-1em" [innerHTML]="g"></span> </p>
-    </ng-container>
+      <ng-container *ngFor="let g of project.designGoals.goals">
+        <p class="pl-3em"><i class="icon ion-md-arrow-forward"></i><span [innerHTML]="g" class="pl-1em"></span></p>
+      </ng-container>
     </section>
   </ng-container>
   <mat-divider></mat-divider>

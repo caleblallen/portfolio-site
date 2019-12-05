@@ -8,9 +8,9 @@ describe('SocialMediaLinksComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SocialMediaLinksComponent ]
+      declarations: [SocialMediaLinksComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

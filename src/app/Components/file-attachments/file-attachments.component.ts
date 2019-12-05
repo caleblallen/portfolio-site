@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { WebLink } from '../../Model/WebLink';
-import {PortfolioProject} from '../../Model/PortfolioProject';
+import { PortfolioProject } from '../../Model/PortfolioProject';
 
 @Component({
   selector: 'app-file-attachments',
@@ -8,8 +8,9 @@ import {PortfolioProject} from '../../Model/PortfolioProject';
   styleUrls: ['./file-attachments.component.scss']
 })
 export class FileAttachmentsComponent implements OnInit {
-  @Input() private project: PortfolioProject;
   public files: WebLink[];
+  @Input() private project: PortfolioProject;
+
   constructor() {
   }
 

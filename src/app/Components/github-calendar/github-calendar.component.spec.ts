@@ -8,9 +8,9 @@ describe('GithubCalendarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GithubCalendarComponent ]
+      declarations: [GithubCalendarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

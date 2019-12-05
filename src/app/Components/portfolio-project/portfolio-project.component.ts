@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {PortfolioProject} from '../../Model/PortfolioProject';
-import {ActivatedRoute} from '@angular/router';
-import {ProjectsService} from '../../Services/projects.service';
+import { PortfolioProject } from '../../Model/PortfolioProject';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectsService } from '../../Services/projects.service';
 
 
 @Component({
@@ -11,14 +11,15 @@ import {ProjectsService} from '../../Services/projects.service';
 })
 export class PortfolioProjectComponent implements OnInit {
   project: PortfolioProject;
+
   constructor(private route: ActivatedRoute, private portfolio: ProjectsService) {
   }
 
   ngOnInit() {
-    // const id = this.route.snapshot.paramMap.get('id');
-    // this.project = this.portfolio.getProject(id.toString());
     this.route.params.subscribe(routeParams => {
-      this.project = this.portfolio.getProject(routeParams.id.toString());
+      this.portfolio.areProjectsLoaded().then( () => {
+        this.project = this.portfolio.getProject(routeParams.id.toString());
+      });
     });
   }
 
