@@ -6,10 +6,12 @@
     z-index: 5 !important;
     margin-bottom: 50px;
   }
+  .mat-menu-item {
+    font-family: $caleb-body-font !important;
+  }
 }
 
 .top-bar {
-  //@include mat-elevation(3);
   z-index: 5;
 }
 
