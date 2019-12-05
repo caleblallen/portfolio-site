@@ -8,9 +8,9 @@ describe('ProjectTitleAnchorComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProjectTitleAnchorComponent ]
+      declarations: [ProjectTitleAnchorComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

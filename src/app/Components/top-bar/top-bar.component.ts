@@ -39,7 +39,7 @@ export class TopBarComponent implements OnInit {
 
     this.keys = Object.keys(this.menus);
 
-    this.pServe.areProjectsLoaded().then( () => {
+    this.pServe.areProjectsLoaded().then(() => {
       this.populateProjects();
     });
 
@@ -50,15 +50,18 @@ export class TopBarComponent implements OnInit {
 
     for (const i of projectKeys) {
       const project = this.pServe.getProject(i);
-      this.menus.Portfolio.push( {
+      this.menus.Portfolio.push({
         title: project.title,
         link: '/project/' + i
       });
     }
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+  }
 
-  arrayTest(val) { return Array.isArray(val); }
+  arrayTest(val) {
+    return Array.isArray(val);
+  }
 
 }

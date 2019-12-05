@@ -15,6 +15,7 @@ export interface TechEntry {
 })
 
 export class PersonalInfoService {
+  public technologySpecifics: TechEntry[];
   private personalDetails: {
     firstName: string;
     lastName: string;
@@ -26,8 +27,6 @@ export class PersonalInfoService {
     emailAddress: string;
     birthDate: Date;
   };
-
-  public technologySpecifics: TechEntry[];
 
   constructor() {
     this.personalDetails = {

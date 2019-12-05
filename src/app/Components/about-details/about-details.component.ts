@@ -8,7 +8,8 @@ import { PersonalInfoService } from '../../Services/personal-info.service';
 })
 export class AboutDetailsComponent implements OnInit {
 
-  constructor(public me: PersonalInfoService) { }
+  constructor(public me: PersonalInfoService) {
+  }
 
   ngOnInit() {
 

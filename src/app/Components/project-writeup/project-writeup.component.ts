@@ -1,5 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {PortfolioProject} from '../../Model/PortfolioProject';
+import { Component, Input, OnInit } from '@angular/core';
+import { PortfolioProject } from '../../Model/PortfolioProject';
 
 @Component({
   selector: 'app-project-writeup',
@@ -8,7 +8,9 @@ import {PortfolioProject} from '../../Model/PortfolioProject';
 })
 export class ProjectWriteupComponent implements OnInit {
   @Input() project: PortfolioProject;
-  constructor() { }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }

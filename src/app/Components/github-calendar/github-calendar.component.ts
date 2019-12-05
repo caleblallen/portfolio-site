@@ -9,7 +9,8 @@ import * as GitHubCalendar from 'github-calendar';
 })
 export class GithubCalendarComponent implements OnInit {
 
-  constructor(private me: PersonalInfoService) { }
+  constructor(private me: PersonalInfoService) {
+  }
 
   ngOnInit() {
     GitHubCalendar('.github-calendar', this.me.github()[0], {

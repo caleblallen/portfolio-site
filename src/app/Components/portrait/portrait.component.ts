@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PersonalInfoService } from '../../Services/personal-info.service';
 
 
@@ -12,12 +12,12 @@ export class PortraitComponent implements OnInit {
   // @Input() rowSpan: number;
 
 
-  constructor(public me: PersonalInfoService) { }
+  constructor(public me: PersonalInfoService) {
+  }
 
   ngOnInit() {
 
   }
-
 
 
 }

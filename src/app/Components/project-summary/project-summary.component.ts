@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
-import {ProjectsService} from '../../Services/projects.service';
-import {PortfolioProject} from '../../Model/PortfolioProject';
+import { Component, Input, OnInit } from '@angular/core';
+import { ProjectsService } from '../../Services/projects.service';
+import { PortfolioProject } from '../../Model/PortfolioProject';
 
 @Component({
   selector: 'app-project-summary',
@@ -9,7 +9,9 @@ import {PortfolioProject} from '../../Model/PortfolioProject';
 })
 export class ProjectSummaryComponent implements OnInit {
   @Input() project: PortfolioProject;
-  constructor(readonly pServe: ProjectsService) { }
+
+  constructor(readonly pServe: ProjectsService) {
+  }
 
   ngOnInit() {
   }

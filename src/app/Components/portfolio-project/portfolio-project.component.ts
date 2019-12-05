@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {PortfolioProject} from '../../Model/PortfolioProject';
-import {ActivatedRoute} from '@angular/router';
-import {ProjectsService} from '../../Services/projects.service';
+import { PortfolioProject } from '../../Model/PortfolioProject';
+import { ActivatedRoute } from '@angular/router';
+import { ProjectsService } from '../../Services/projects.service';
 
 
 @Component({
@@ -11,6 +11,7 @@ import {ProjectsService} from '../../Services/projects.service';
 })
 export class PortfolioProjectComponent implements OnInit {
   project: PortfolioProject;
+
   constructor(private route: ActivatedRoute, private portfolio: ProjectsService) {
   }
 

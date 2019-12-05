@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PortfolioProject } from '../../Model/PortfolioProject';
 import { Lightbox } from 'ngx-lightbox';
 import { GalleryPhoto } from '../../Model/GalleryPhoto';
@@ -15,7 +15,8 @@ export class ProjectGalleryComponent implements OnInit {
   album: GalleryPhoto[];
   currentProject: PortfolioProject;
 
-  constructor(private lightBox: Lightbox, private route: ActivatedRoute, private portfolio: ProjectsService) { }
+  constructor(private lightBox: Lightbox, private route: ActivatedRoute, private portfolio: ProjectsService) {
+  }
 
   ngOnInit() {
     this.route.params.subscribe(routeParams => {
@@ -24,6 +25,16 @@ export class ProjectGalleryComponent implements OnInit {
       this.generateAlbums(this.currentProject.gallery);
     });
   }
+
+  open(index: number): void {
+    this.lightBox.open(this.album, index);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this.lightBox.close();
+  }
+
   private generateAlbums(files): void {
     for (const f of files) {
       const photo = {
@@ -34,12 +45,5 @@ export class ProjectGalleryComponent implements OnInit {
 
       this.album.push(photo);
     }
-  }
-  open(index: number): void {
-    this.lightBox.open(this.album, index);
-  }
-  close(): void {
-    // close lightbox programmatically
-    this.lightBox.close();
   }
 }

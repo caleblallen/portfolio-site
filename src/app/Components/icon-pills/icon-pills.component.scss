@@ -1,4 +1,3 @@
-
 @import '~@angular/material/theming';
 @import 'src/theme.scss';
 
@@ -28,9 +27,10 @@ $spacer: 7px;
     padding-left: $spacer;
     padding-right: $spacer;
     vertical-align: super;
-    position:absolute;
+    position: absolute;
 
   }
+
   div {
     display: inline-block;
     font-size: $font-size !important;
@@ -42,7 +42,8 @@ $spacer: 7px;
     position: absolute;
     left: 2em;
   }
-  &:hover{
+
+  &:hover {
     cursor: pointer;
     @include mat-elevation(2);
   }

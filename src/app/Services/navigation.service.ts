@@ -3,16 +3,16 @@ import { Router } from '@angular/router';
 import { WebLink } from '../Model/WebLink';
 
 
-
 @Injectable({
   providedIn: 'root'
 })
 export class NavigationService {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   public getBaseRoutes(): WebLink[] {
-    let baseRoutes: WebLink[] = [];
+    const baseRoutes: WebLink[] = [];
     // Examine all Routes
     for (const c of this.router.config) {
       // Omit Routes that have contextual links such as ids.

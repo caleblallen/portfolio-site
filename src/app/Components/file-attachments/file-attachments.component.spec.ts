@@ -8,9 +8,9 @@ describe('FileAttachmentsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FileAttachmentsComponent ]
+      declarations: [FileAttachmentsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

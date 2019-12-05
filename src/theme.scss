@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+
 @include mat-core();
 
 /*
@@ -24,9 +25,9 @@ $mat-blue-grey
 */
 
 $caleb-primary: mat-palette($mat-blue-grey);
-$caleb-accent:  mat-palette($mat-blue, 500, 900, 100);
-$caleb-warn:    mat-palette($mat-deep-orange);
-$caleb-theme:   mat-light-theme($caleb-primary, $caleb-accent, $caleb-warn);
+$caleb-accent: mat-palette($mat-blue, 500, 900, 100);
+$caleb-warn: mat-palette($mat-deep-orange);
+$caleb-theme: mat-light-theme($caleb-primary, $caleb-accent, $caleb-warn);
 $caleb-background: mat-color($caleb-theme, background);
 $caleb-foreground: mat-color($caleb-theme, foreground);
 $caleb-text: mat-color($caleb-foreground, text);
@@ -38,15 +39,6 @@ $caleb-banner-font: 'Bebas Neue', cursive;
 // $caleb-banner-font: 'Skranji', cursive;
 // $caleb-banner-font: 'Turret Road', cursive;
 // $caleb-banner-font: 'Turret Road', cursive;
-
-
-
-
-
-
-
-
-
 
 
 // $caleb-body-font: 'Open Sans Condensed', sans-serif;

@@ -1,14 +1,14 @@
 <div fxLayout="column">
-<!--  <div class="splash">
-    <div>Please</div>
-    <div>look</div>
-    <div>around</div>
-  </div>-->
+  <!--  <div class="splash">
+      <div>Please</div>
+      <div>look</div>
+      <div>around</div>
+    </div>-->
   <div *ngIf="isBrowser">
     <app-homepage-doodle></app-homepage-doodle>
   </div>
   <div class="introduction">
-    <div fxLayout="column"  fxLayoutGap="3em">
+    <div fxLayout="column" fxLayoutGap="3em">
 
       <div class="container" fxLayout="row" fxLayoutAlign="center center">
         <div class="byline"><span> I'm {{ me.name() }} and this is my professional showcase and portfolio. </span></div>

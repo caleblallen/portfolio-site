@@ -1,12 +1,9 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { WebLink } from '../../Model/WebLink';
 import { NavigationService } from '../../Services/navigation.service';
-
 /*import 'css-doodle';
 import Doodle from 'css-doodle';*/
 import { PersonalInfoService } from '../../Services/personal-info.service';
-
-import { PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 
 
@@ -34,7 +31,7 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
     this.baseRoutes = this.nav.getBaseRoutes();
 
-    if(this.isBrowser) {
+    if (this.isBrowser) {
 
     }
   }

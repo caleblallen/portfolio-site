@@ -1,6 +1,5 @@
-import { Component, OnInit, Inject, AfterViewInit } from '@angular/core';
-import { PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+import { AfterViewInit, Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import * as ddl from 'css-doodle';
 
 @Component({
@@ -11,6 +10,7 @@ import * as ddl from 'css-doodle';
 export class HomepageDoodleComponent implements OnInit, AfterViewInit {
   readonly isBrowser: boolean;
   readonly appBackground: string;
+
   constructor(@Inject(PLATFORM_ID) platformId) {
     this.isBrowser = isPlatformBrowser(platformId);
     this.appBackground = '#fafafa';
@@ -22,20 +22,21 @@ export class HomepageDoodleComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
 
     if (this.isBrowser) {
-      import('css-doodle').then( () => {
+      import('css-doodle').then(() => {
         this.runDoodle();
       });
     }
   }
+
 //             @grid:  10x60 / 100vmax 30vmax;
   private updateDoodle(doodle, hue): number {
     doodle.update(
       `:doodle {
             @grid:  14x40 / 100vmax 35vmax;
-            background: ${ this.appBackground };
+            background: ${this.appBackground};
           }
           transition: .6s @r(1s);
-          --hue: calc( ${ hue % 240 } + .5 * @row() * @col());
+          --hue: calc( ${hue % 240} + .5 * @row() * @col());
           background: hsla(var(--hue),50%, 70%, @r(.1, .9));
           clip-path: ellipse(100% 100% at @pick('0 0', '0 100%', '100% 0', '100% 100%'))`);
 
@@ -50,9 +51,8 @@ export class HomepageDoodleComponent implements OnInit, AfterViewInit {
     hue = this.updateDoodle(doodle, hue);
 
 
-
-    setInterval( () => {
-      hue = this.updateDoodle(doodle,hue);
+    setInterval(() => {
+      hue = this.updateDoodle(doodle, hue);
     }, 2000);
 
   }

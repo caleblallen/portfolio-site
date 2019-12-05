@@ -8,9 +8,9 @@ describe('HomepageTitleBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomepageTitleBarComponent ]
+      declarations: [HomepageTitleBarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

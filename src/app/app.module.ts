@@ -1,27 +1,34 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatButtonModule, MatExpansionModule, MatIconModule, MatMenuModule, MatSnackBarModule, MatToolbarModule} from '@angular/material';
+import {
+  MatButtonModule,
+  MatExpansionModule,
+  MatIconModule,
+  MatMenuModule,
+  MatSnackBarModule,
+  MatToolbarModule
+} from '@angular/material';
 import { TopBarComponent } from './Components/top-bar/top-bar.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageComponent } from './Components/home-page/home-page.component';
-import {MatGridListModule} from '@angular/material/grid-list';
+import { MatGridListModule } from '@angular/material/grid-list';
 import { PortraitComponent } from './Components/portrait/portrait.component';
-import {MatCardModule} from '@angular/material/card';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomepageTitleBarComponent } from './Components/homepage-title-bar/homepage-title-bar.component';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatDividerModule } from '@angular/material/divider';
 import { SocialMediaLinksComponent } from './Components/social-media-links/social-media-links.component';
 import { PortfolioProjectComponent } from './Components/portfolio-project/portfolio-project.component';
 import { ProjectWriteupComponent } from './Components/project-writeup/project-writeup.component';
 import { ProjectSummaryComponent } from './Components/project-summary/project-summary.component';
-import { MarkdownModule} from 'ngx-markdown';
-import {MatListModule} from '@angular/material/list';
+import { MarkdownModule } from 'ngx-markdown';
+import { MatListModule } from '@angular/material/list';
 import { IconPillsComponent } from './Components/icon-pills/icon-pills.component';
-import {MatRippleModule} from '@angular/material/core';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatRippleModule } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { ProjectTitleAnchorComponent } from './Components/project-title-anchor/project-title-anchor.component';
 // import 'hammerjs';
 import { BlogHomeComponent } from './Components/blog-home/blog-home.component';
@@ -37,7 +44,6 @@ import { AboutTechnologySpecificsComponent } from './Components/about-technology
 import { FileAttachmentsComponent } from './Components/file-attachments/file-attachments.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageDoodleComponent } from './Components/homepage-doodle/homepage-doodle.component';
-
 
 
 @NgModule({
@@ -91,4 +97,5 @@ import { HomepageDoodleComponent } from './Components/homepage-doodle/homepage-d
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -1,29 +1,35 @@
 //@import 'src/variables.scss';
 @import 'src/theme.scss';
+
 table {
 
   border-collapse: collapse;
 }
+
 tr {
   &:nth-child(even) {
-    background: rgba(255,255,255,.1);
+    background: rgba(255, 255, 255, .1);
   }
+
   td {
     padding: 5px 0.5em 5px 0.5em;
 
-    &:first-child{
+    &:first-child {
       font-size: 1.5em;
       line-height: 100%;
     }
   }
 }
+
 .tech-dets {
   display: inline-block;
   padding: 0 0.5em 0 0;
+
   & span:nth-child(odd) {
     color: mat-color($caleb-accent);
     font-weight: bold;
   }
+
   & span:nth-child(even) {
 
   }

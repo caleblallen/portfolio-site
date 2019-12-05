@@ -8,9 +8,9 @@ describe('TextPillComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextPillComponent ]
+      declarations: [TextPillComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
