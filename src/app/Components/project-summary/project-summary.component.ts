@@ -10,7 +10,7 @@ import { PortfolioProject } from '../../Model/PortfolioProject';
 export class ProjectSummaryComponent implements OnInit {
   @Input() project: PortfolioProject;
 
-  constructor(readonly pServe: ProjectsService) {
+  constructor(readonly portfolio: ProjectsService) {
   }
 
   ngOnInit() {

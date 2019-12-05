@@ -78,7 +78,7 @@ app.get('*', (req, res) => {
   res.render('index', { req });
 });
 
-// TODO: Check for produciton enviroment. FileReplacement in angular.json is not switching to production environment during build.
+// TODO: Check for production environment. FileReplacement in angular.json is not switching to production environment during build.
 if ( credentials !== null) {
   const httpsServer = https.createServer(credentials, app);
   httpsServer.listen(PORT, () => {

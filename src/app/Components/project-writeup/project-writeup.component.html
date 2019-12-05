@@ -1,4 +1,4 @@
-<section class="project-writeup-wrapper content">
+<section class="project-writeup-wrapper content"  *ngIf="portfolio.areProjectsLoaded() | async">
   <app-project-title-anchor></app-project-title-anchor>
   <!--  <h4>Description:</h4>-->
 

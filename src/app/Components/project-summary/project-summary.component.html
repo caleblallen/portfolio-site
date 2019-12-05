@@ -1,4 +1,4 @@
-<mat-card class="summary-card">
+<mat-card class="summary-card" *ngIf="portfolio.areProjectsLoaded() | async">
   <mat-card-header>
     <!--    <mat-card-title>{{ project.title }}</mat-card-title>-->
     <mat-card-title>Project Summary</mat-card-title>
@@ -13,7 +13,7 @@
             <div class="container" fxLayout="column" fxLayoutgap="5px">
               <!-- TODO: Switch Devicons to node_module for more efficiency-->
               <div fxFlex="50%">
-                <app-icon-pills [direction]="'left'" [icon]="pServe.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
+                <app-icon-pills [direction]="'left'" [icon]="portfolio.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
               </div>
             </div>
           </ng-container>
@@ -24,7 +24,7 @@
           <ng-container *ngIf="index < project.frameWorks.length/2">
             <div class="container" fxLayout="column">
               <div fxFlex="50%">
-                <app-icon-pills [direction]="'right'" [icon]="pServe.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
+                <app-icon-pills [direction]="'right'" [icon]="portfolio.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
               </div>
             </div>
           </ng-container>
