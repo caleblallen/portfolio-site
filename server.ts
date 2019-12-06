@@ -74,17 +74,22 @@ app.get('*.*', express.static(DIST_FOLDER, {
 }));
 
 // All regular routes use the Universal engine
+app.get('*', (req, res) => {
+  res.render('index', { req });
+});
+
+/*// All regular routes use the Universal engine
 app.get('/', (req, res) => {
   res.render('index', { req });
 });
 
 // All regular routes use the Universal engine
-app.get('/#/*', (req, res) => {
+app.get('/#/!*', (req, res) => {
   res.render('index', { req });
 });
 
 // All regular routes use the Universal engine
-app.get('/*', (req, res) => {
+app.get('/!*', (req, res) => {
   let newUrl = '';
   if (req.secure) {
     newUrl += 'https://';
@@ -98,7 +103,7 @@ app.get('/*', (req, res) => {
     Location: newUrl
   });
   res.end();
-});
+});*/
 
 
 // TODO: Check for production environment. FileReplacement in angular.json is not switching to production environment during build.

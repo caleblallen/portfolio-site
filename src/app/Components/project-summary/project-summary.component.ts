@@ -23,4 +23,5 @@ export class ProjectSummaryComponent implements OnInit {
   public viewLiveProject(): void {
     window.open(this.project.liveLink.link, '_blank');
   }
+
 }

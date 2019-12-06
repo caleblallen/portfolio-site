@@ -25,18 +25,12 @@ export class TopBarComponent implements OnInit {
               readonly router: Router) {
     this.menus = {
       Home: null,
-      Portfolio: null,
+      Portfolio: [],
       About: null
     };
 
     for (const e of this.nav.getBaseRoutes()) {
-      if (e.title === '**') {
-        continue;
-      } else if (e.title === 'Portfolio') {
-        this.menus[e.title] = [];
-      } else {
-        this.menus[e.title] = e;
-      }
+      this.menus[e.title] = e;
     }
 
     this.keys = Object.keys(this.menus);

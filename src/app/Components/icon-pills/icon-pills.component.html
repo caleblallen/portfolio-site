@@ -1,4 +1,7 @@
-<div [attr.aria-label]="'A button that indicates the ' + text + ' technology. Click to see other projects using this technology'" [matTooltipHideDelay]="250" [matTooltipPosition]="direction"
+<div [routerLink]="lnk"
+  [attr.aria-label]="'A button that indicates the ' + text + ' technology. Click to see other projects using this technology'"
+     [matTooltipHideDelay]="250"
+     [matTooltipPosition]="direction"
      [matTooltipShowDelay]="250"
      [matTooltip]="'See More Projects Utilizing ' + text" class="pill-badge-wrapper" matRipple>
   <span [class]="icon"></span>

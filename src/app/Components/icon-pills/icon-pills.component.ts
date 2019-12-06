@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-icon-pills',
   templateUrl: './icon-pills.component.html',
@@ -9,7 +10,7 @@ export class IconPillsComponent implements OnInit {
   @Input() text: string;
   @Input() icon: string;
   @Input() direction: string;
-
+  @Input() lnk: string;
   constructor() {
   }
 

@@ -16,7 +16,7 @@ export class NavigationService {
     // Examine all Routes
     for (const c of this.router.config) {
       // Omit Routes that have contextual links such as ids.
-      if (!c.path.includes(':')) {
+      if (!c.path.includes(':') && !c.path.includes('**')) {
         baseRoutes.push(
           {
             title: (c.path === '') ? 'Home' : this.toTitleCase(c.path),
