@@ -1,24 +1,39 @@
 <ng-container *ngIf="portfolio.areProjectsLoaded() | async">
+  <div fxLayout="column" fxLayoutAlign="center center">
 
-  <div fxLayout *ngFor="let p of projects" class="resultCards">
-    <mat-card fxFlex="40" class="projectCard">
-      <mat-card-header>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+  <div fxLayout="row" *ngFor="let key of projects"
+
+    class="resultCards"
+    ngStyle.xl="width: 1700px"
+    ngStyle.lg="width: 1100px"
+    ngStyle.md="width: 900px"
+    ngStyle.sm="width: 500px"
+    ngStyle.xs="width: 95vw">
+<!--      <img mat-card-image [src]="'assets/img/' + p.anchorImage" alt="Photo of {{ p.title }}">-->
+    <mat-card class="projectCard" >
+      <div fxLayout="row" fxLayoutGap.gt-sm="1em" fxLayout.lt-md="column" >
+      <div fxFlexOrder="2" fxFlex="35" fxFlex.lt-md="100" class="previewImg mat-elevation-z2" [style.background-image]="'url(assets/img/' + portfolio.getProject(key).anchorImage + ')'"></div>
+      <span fxFlex="65">
+      <mat-card-header >
+        <mat-card-title> {{ portfolio.getProject(key).title }}</mat-card-title>
       </mat-card-header>
-      <div></div>
-      <img mat-card-image [src]="'assets/img/' + p.anchorImage" alt="Photo of {{ p.title }}">
-      <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
+      <mat-card-content class="searchCardContent" >
+        <p class="iconPile">
+          <span *ngFor="let i of portfolio.getProject(key).frameWorks" [class]="portfolio.getFrameworkIcon(i)"></span>
+        </p>
+        <p ngStyle.lt-md="text-align: center">
+          {{ portfolio.getProject(key).description }}
         </p>
       </mat-card-content>
-      <mat-card-actions>
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
+      </span>
+      </div>
+      <mat-card-actions fxLayout="row" fxLayoutAlign.lt-md="space-between">
+        <button mat-stroked-button [routerLink]="'/project/' + key" color="primary">Project Page</button>
+        <button mat-stroked-button *ngIf="portfolio.getProject(key).sourceCode !== null" (click)="viewSourceCodeByKey(key)" color="primary">Source Code</button>
       </mat-card-actions>
+
     </mat-card>
+
+  </div>
   </div>
 </ng-container>

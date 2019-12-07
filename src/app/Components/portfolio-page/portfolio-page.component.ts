@@ -9,7 +9,7 @@ import { PortfolioProject } from '../../Model/PortfolioProject';
   styleUrls: ['./portfolio-page.component.scss']
 })
 export class PortfolioPageComponent implements OnInit {
-  public projects: PortfolioProject[];
+  public projects: string[];
 
   constructor(public portfolio: ProjectsService, private route: ActivatedRoute) { }
 
@@ -17,11 +17,13 @@ export class PortfolioPageComponent implements OnInit {
     this.projects = [];
     this.route.params.subscribe(routeParams => {
       this.portfolio.areProjectsLoaded().then( () => {
-        for (const title of this.portfolio.projectsByFramework(routeParams.frameWork.toString())) {
-          this.projects.push(this.portfolio.getProject(title));
-        }
+        console.log('routeparamis', routeParams.frameWork.toString());
+        this.projects = this.portfolio.projectsByFramework(routeParams.frameWork.toString());
       });
     });
   }
 
+  viewSourceCodeByKey(key) {
+    window.open(this.portfolio.getProject(key).sourceCode.link, '_blank');
+  }
 }

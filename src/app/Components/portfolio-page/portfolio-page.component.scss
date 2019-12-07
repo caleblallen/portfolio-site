@@ -1,6 +1,35 @@
+@import 'src/theme.scss';
+
+::ng-deep {
+  mat-card-header {
+    border-bottom: 1px solid $caleb-text;
+  }
+}
 .resultCards {
+  margin-bottom: 2em;
+  .searchCardContent {
+    margin-left: 1em;
+    margin-top: 1em;
+  }
   .projectCard {
     margin-top: 1em;
     display: inline-block;
+    width: 100%;
+    position: relative;
+  }
+  .previewImg {
+    border-radius: .5em;
+    min-height: 150px;
+    background-size: cover;
+    float: left;
+    margin-right: 2em;
+  }
+  .iconPile{
+    font-size: 1.5em;
+    span {
+      color: mat-color($caleb-accent);
+      margin-right: 0.5em;
+
+    }
   }
 }
