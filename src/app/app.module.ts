@@ -18,7 +18,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { PortraitComponent } from './Components/portrait/portrait.component';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HomepageTitleBarComponent } from './Components/homepage-title-bar/homepage-title-bar.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { SocialMediaLinksComponent } from './Components/social-media-links/social-media-links.component';
 import { PortfolioProjectComponent } from './Components/portfolio-project/portfolio-project.component';
