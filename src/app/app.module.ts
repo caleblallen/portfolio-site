@@ -18,7 +18,6 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { PortraitComponent } from './Components/portrait/portrait.component';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { HomepageTitleBarComponent } from './Components/homepage-title-bar/homepage-title-bar.component';
 import { MatDividerModule } from '@angular/material/divider';
 import { SocialMediaLinksComponent } from './Components/social-media-links/social-media-links.component';
 import { PortfolioProjectComponent } from './Components/portfolio-project/portfolio-project.component';
@@ -39,7 +38,6 @@ import { PortfolioPageComponent } from './Components/portfolio-page/portfolio-pa
 import { AboutDetailsComponent } from './Components/about-details/about-details.component';
 import { GithubCalendarComponent } from './Components/github-calendar/github-calendar.component';
 import { AboutAtAGlanceComponent } from './Components/about-at-a-glance/about-at-a-glance.component';
-import { TextPillComponent } from './Components/text-pill/text-pill.component';
 import { AboutTechnologySpecificsComponent } from './Components/about-technology-specifics/about-technology-specifics.component';
 import { FileAttachmentsComponent } from './Components/file-attachments/file-attachments.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -53,7 +51,6 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
     TopBarComponent,
     HomePageComponent,
     PortraitComponent,
-    HomepageTitleBarComponent,
     SocialMediaLinksComponent,
     PortfolioProjectComponent,
     ProjectWriteupComponent,
@@ -68,7 +65,6 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
     AboutDetailsComponent,
     GithubCalendarComponent,
     AboutAtAGlanceComponent,
-    TextPillComponent,
     AboutTechnologySpecificsComponent,
     FileAttachmentsComponent,
     HomepageDoodleComponent,

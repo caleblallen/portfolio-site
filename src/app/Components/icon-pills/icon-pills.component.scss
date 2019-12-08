@@ -2,7 +2,6 @@
 @import '~src/theme.scss';
 
 $structureColor: $caleb-text;
-$borderRadius: 40px;
 $font-size: 20px;
 $height: 26px;
 $spacer: 7px;
@@ -17,7 +16,6 @@ $spacer: 7px;
   vertical-align: middle;
   font-size: 0;
   border: 1px solid $structureColor;
-
   span {
     display: inline-block;
     font-size: $font-size !important;
@@ -28,21 +26,17 @@ $spacer: 7px;
     padding-right: $spacer;
     vertical-align: super;
     position: absolute;
-
   }
-
   div {
     display: inline-block;
     font-size: $font-size !important;
     height: $height;
-    display: inline-block;
     padding: 0 $spacer 0 $spacer;
     line-height: $height;
     vertical-align: text-bottom;
     position: absolute;
     left: 2em;
   }
-
   &:hover {
     cursor: pointer;
     @include mat-elevation(2);

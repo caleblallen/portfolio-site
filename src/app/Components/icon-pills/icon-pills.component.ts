@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {TooltipPosition} from '@angular/material';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class IconPillsComponent implements OnInit {
   @Input() text: string;
   @Input() icon: string;
-  @Input() direction: string;
+  @Input() direction: TooltipPosition;
   @Input() lnk: string;
   constructor() {
   }

@@ -1,6 +1,5 @@
 <mat-card class="summary-card" *ngIf="portfolio.areProjectsLoaded() | async">
   <mat-card-header>
-    <!--    <mat-card-title>{{ project.title }}</mat-card-title>-->
     <mat-card-title>Project Summary</mat-card-title>
     <mat-card-subtitle> {{ project.title }}</mat-card-subtitle>
   </mat-card-header>
@@ -10,22 +9,23 @@
         <!--TODO: Even though the number of frameworks will always be small, two loops here is painful.-->
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
           <ng-container *ngIf="index >= project.frameWorks.length/2">
-            <div class="container" fxLayout="column" fxLayoutgap="5px">
+            <div class="container" fxLayout="column" fxLayoutGap="5px">
               <!-- TODO: Switch Devicons to node_module for more efficiency-->
               <div fxFlex="50%">
-                <app-icon-pills [lnk]="'/portfolio/' + portfolio.sanitizeFrameWork(f)" [direction]="'left'" [icon]="portfolio.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
+                <app-icon-pills [lnk]="'/portfolio/' + portfolio.sanitizeFrameWork(f)" [direction]="'left'"
+                                [icon]="portfolio.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
               </div>
             </div>
           </ng-container>
         </ng-container>
       </div>
-      <div class="container" fxFlex="50%" fxFlexOrder.lt-md="1" fxLayout="column" fxLayoutgap="5px">
+      <div class="container" fxFlex="50%" fxFlexOrder.lt-md="1" fxLayout="column">
         <ng-container *ngFor="let f of project.frameWorks; let index=index">
           <ng-container *ngIf="index < project.frameWorks.length/2">
             <div class="container" fxLayout="column">
               <div fxFlex="50%">
-                <app-icon-pills [lnk]="'/portfolio/' + portfolio.sanitizeFrameWork(f)" [direction]="'right'" [icon]="portfolio.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
-<!--                <app-icon-pills [direction]="'right'" [icon]="portfolio.getFrameworkIcon(f)" [text]="f"></app-icon-pills>-->
+                <app-icon-pills [lnk]="'/portfolio/' + portfolio.sanitizeFrameWork(f)" [direction]="'right'"
+                                [icon]="portfolio.getFrameworkIcon(f)" [text]="f"></app-icon-pills>
               </div>
             </div>
           </ng-container>

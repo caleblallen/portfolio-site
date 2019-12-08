@@ -1,6 +1,7 @@
 <h3>Gallery:</h3>
 <section class="pl-1em" fxLayout="row wrap" fxLayoutGap="1vw">
   <div *ngFor="let image of album; let i = index">
-    <img (click)="open(i)" [matRippleColor]="'black'" [src]="image.thumb" matRipple/>
+    <img alt="An image depicting one of the features described above." (click)="open(i)" [matRippleColor]="'black'"
+         [src]="image.thumb" matRipple/>
   </div>
 </section>

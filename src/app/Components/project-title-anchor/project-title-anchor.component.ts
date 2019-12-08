@@ -11,7 +11,6 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./project-title-anchor.component.scss']
 })
 export class ProjectTitleAnchorComponent implements OnInit {
-  // @Input() project: PortfolioProject;
   project: PortfolioProject;
   private photo: GalleryPhoto;
 

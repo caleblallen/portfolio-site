@@ -26,6 +26,8 @@ export class PersonalInfoService {
     githubAccount: string;
     emailAddress: string;
     birthDate: Date;
+    employed: Date;
+    graduate: Date;
   };
 
   constructor() {
@@ -38,7 +40,9 @@ export class PersonalInfoService {
       linkedIn: 'https://www.linkedin.com/in/caleb-allen-066136133/',
       githubAccount: 'caleblallen',
       emailAddress: 'caleb.allen@gmail.com',
-      birthDate: new Date('1987-03-03')
+      birthDate: new Date('1987-03-03'),
+      employed: new Date('March 1, 2010 07:30:00'),
+      graduate: new Date('October 20, 2018 07:30:00')
     };
 
     this.technologySpecifics = [
@@ -92,13 +96,16 @@ export class PersonalInfoService {
     ];
   }
 
-  public fractionalAge(date = ''): number {
-    const now = new Date();
-    let then = this.personalDetails.birthDate;
-    if (date !== '') {
-      then = new Date(date);
-    }
-    return (now.getTime() - then.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+  public yearsOld(): number {
+    return this.fractionalTime(this.personalDetails.birthDate);
+  }
+
+  public yearsEmployed(): number {
+    return this.fractionalTime(this.personalDetails.employed);
+  }
+
+  public yearsGraduate(): number {
+    return this.fractionalTime(this.personalDetails.graduate);
   }
 
   public name(): string {
@@ -130,4 +137,8 @@ export class PersonalInfoService {
     return [this.personalDetails.twitterAccount, `https://twitter.com/${this.personalDetails.twitterAccount}`];
   }
 
+  private fractionalTime(then: Date): number {
+    const now = new Date();
+    return (now.getTime() - then.getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+  }
 }

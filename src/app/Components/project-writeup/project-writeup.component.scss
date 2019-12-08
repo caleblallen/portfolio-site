@@ -1,32 +1,10 @@
-@import 'src/theme.scss';
+@import '~src/theme.scss';
 
 
 .project-writeup-wrapper {
   padding-left: 1em;
-  /*border-left: 1px solid rgba(255,87,34,.5)*/
   padding-bottom: 2em;
 
-}
-
-.gallery-cards {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.gallery-cards img {
-  border: 1px solid $caleb-text;
-  max-width: 30%;
-  margin-bottom: 2vh;
-}
-
-.mb-5 {
-  margin-bottom: 5px;
-}
-
-.mb-1em {
-  margin-bottom: 1em;
 }
 
 .pl-3em {

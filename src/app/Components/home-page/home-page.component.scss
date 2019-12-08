@@ -1,103 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
-@import 'src/theme.scss';
-
-/*@mixin angular-material-theme($caleb-theme) {
-
-}*/
-
-$AppBackground: mat-color($caleb-foreground);
-$AngularAccent: mat-color($caleb-accent);
-
-$darkColor: #402d2d;
-$fontColor: #ffffff;
-$left-offset: 29px;
-$clip-height: 50px;
-$line-height: $clip-height - 5px;
-$total-lines: 1;
-$gridSize: calc(100vmax / 60);
-
-.home-wrapper {
-  height: 100%;
-}
-
-.eye-catch {
-  z-index: -1 !important;
-  width: 100vw;
-  overflow: hidden;
-}
-
+@import '~src/theme.scss';
 
 .introduction {
-  background-color: $AppBackground;
-  //min-height: 30vh;
+  background-color: mat-color($caleb-foreground);
   padding-top: 3em;
-
   .byline {
     font-size: 1.4em;
-
     strong {
-      color: $AngularAccent;
+      color: mat-color($caleb-accent);
       letter-spacing: 2px;
     }
   }
-}
-
-$EyeCatchFontSize: 6em;
-
-.welcome {
-  text-align: right;
-  color: $AppBackground;
-
-  span {
-    width: 100%;
-    font-size: $EyeCatchFontSize;
-    text-shadow: -2px -2px 0 #fff,
-    2px -2px 0 #fff,
-    -2px 2px 0 #fff,
-    2px 2px 0 #fff,
-    6px 6px 0 #000;
-
-  }
-}
-
-.welcome-amp {
-  color: $AppBackground;
-
-  span {
-    width: 100%;
-    font-size: $EyeCatchFontSize;
-    text-shadow: -2px -2px 0 #fff,
-    2px -2px 0 #fff,
-    -2px 2px 0 #fff,
-    2px 2px 0 #fff,
-    6px 6px 0 #000;
-  }
-}
-
-.welcome-message {
-  color: $AppBackground;
-
-  span {
-    width: 100%;
-    font-size: $EyeCatchFontSize;
-    //mix-blend-mode: overlay;
-    text-shadow: -2px -2px 0 #fff,
-    2px -2px 0 #fff,
-    -2px 2px 0 #fff,
-    2px 2px 0 #fff,
-    6px 6px 0 #000;
-  }
-}
-
-.home-page-spacer {
-  height: 17vh;
-}
-
-.introduction {
-
   .container {
     text-align: center;
   }
 }
-
-//@import "src/variables.scss";
