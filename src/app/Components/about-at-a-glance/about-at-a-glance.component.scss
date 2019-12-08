@@ -1,19 +1,22 @@
-@import 'src/theme.scss';
+@import '~src/theme.scss';
 
 .stat-list {
   width: 100%;
 
   mat-list-item {
-    font-size: 1.5em;
+
 
     &:not(:last-child) {
       border-bottom: 1px dashed $caleb-text;
     }
 
     .timer-label {
+      font-size: 1.2em;
     }
 
     .timer {
+      font-size: 1.2em;
+      color: mat-color($caleb-accent);
       margin-left: auto;
       text-align: right;
       display: inline-block;

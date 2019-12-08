@@ -1,23 +1,6 @@
 @import '~@angular/material/theming';
-@import 'src/theme.scss';
+@import '~src/theme.scss';
 
-::ng-deep {
-  .mat-toolbar {
-    z-index: 5 !important;
-    margin-bottom: 50px;
-  }
-  .mat-menu-item {
-    font-family: $caleb-body-font !important;
-  }
-}
-
-.top-bar {
-  z-index: 5;
-}
-
-.spacer {
-  flex: 1 1 auto;
-}
 
 .name-bar {
   font-family: $caleb-banner-font !important;
@@ -31,25 +14,6 @@
   z-index: 10;
 }
 
-.small-screen-name {
-  display: inline-block;
-  height: 1.75em;
-  font-size: 1.75em;
-  line-height: 1.75em;
-
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-.top-bar-button {
-  transition: all 3s linear !important;
-}
-
-//
-//button {
-//  font-family: 'Bebas Neue', cursive !important;
-//}
 ::ng-deep {
   .strangeButton {
     span {

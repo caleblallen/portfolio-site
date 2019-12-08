@@ -11,6 +11,14 @@ export class NavigationService {
   constructor(private router: Router) {
   }
 
+  private toTitleCase(str: string): string {
+    let collector = '';
+    for (const s of str.split(/[.!?]/)) {
+      collector += s.charAt(0).toUpperCase() + s.substr(1);
+    }
+    return collector;
+  }
+
   public getBaseRoutes(): WebLink[] {
     const baseRoutes: WebLink[] = [];
     // Examine all Routes
@@ -25,13 +33,5 @@ export class NavigationService {
       }
     }
     return baseRoutes;
-  }
-
-  private toTitleCase(str: string): string {
-    let collector = '';
-    for (const s of str.split(/[.!?]/)) {
-      collector += s.charAt(0).toUpperCase() + s.substr(1);
-    }
-    return collector;
   }
 }

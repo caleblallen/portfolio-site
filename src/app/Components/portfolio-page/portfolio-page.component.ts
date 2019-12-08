@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProjectsService } from '../../Services/projects.service';
 import { ActivatedRoute } from '@angular/router';
-import { PortfolioProject } from '../../Model/PortfolioProject';
 
 @Component({
   selector: 'app-portfolio-page',

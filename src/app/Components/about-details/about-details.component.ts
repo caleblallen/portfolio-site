@@ -16,11 +16,4 @@ export class AboutDetailsComponent implements OnInit {
 
   }
 
-  public formatTechnologyEntries(key): string {
-    let accumulator = '';
-    for (const det of this.me.technologySpecifics[key].details) {
-      accumulator += `<span class=""`;
-    }
-    return '';
-  }
 }

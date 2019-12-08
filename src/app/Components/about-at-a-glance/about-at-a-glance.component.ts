@@ -12,16 +12,18 @@ export class AboutAtAGlanceComponent implements OnInit {
   public liveDegree: number;
 
   constructor(public me: PersonalInfoService) {
+    // Default to prevent errors with undefined values
     this.liveAge = 0;
     this.liveEmployed = 0;
     this.liveDegree = 0;
   }
 
   ngOnInit() {
+    // Update age to an absurd degree of accuracy. :)
     setInterval(() => {
-      this.liveAge = this.me.fractionalAge();
-      this.liveEmployed = this.me.fractionalAge('March 1, 2010 07:30:00');
-      this.liveDegree = this.me.fractionalAge('October 20, 2018 07:30:00');
+      this.liveAge = this.me.yearsOld();
+      this.liveEmployed = this.me.yearsEmployed();
+      this.liveDegree = this.me.yearsGraduate();
     }, 100);
   }
 
