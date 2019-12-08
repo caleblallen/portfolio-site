@@ -1,23 +1,23 @@
 <ng-container *ngIf="portfolio.areProjectsLoaded() | async">
   <div fxLayout="column" fxLayoutAlign="center center">
-
-  <div fxLayout="row" *ngFor="let key of projects"
-
-    class="resultCards"
-    ngStyle.xl="width: 1700px"
-    ngStyle.lg="width: 1100px"
-    ngStyle.md="width: 900px"
-    ngStyle.sm="width: 500px"
-    ngStyle.xs="width: 95vw">
-<!--      <img mat-card-image [src]="'assets/img/' + p.anchorImage" alt="Photo of {{ p.title }}">-->
-    <mat-card class="projectCard" >
-      <div fxLayout="row" fxLayoutGap.gt-sm="1em" fxLayout.lt-md="column">
-      <div fxFlexOrder="2"  fxFlex="35" fxFlex.lt-md="100" class="previewImg mat-elevation-z4" [style.background-image]="'url(assets/img/' + portfolio.getProject(key).anchorImage + ')'"></div>
-      <span fxFlex="65">
+    <div fxLayout="row" *ngFor="let key of projects"
+         class="resultCards"
+         ngStyle.xl="width: 1700px"
+         ngStyle.lg="width: 1100px"
+         ngStyle.md="width: 900px"
+         ngStyle.sm="width: 500px"
+         ngStyle.xs="width: 95vw">
+      <mat-card class="projectCard">
+        <div fxLayout="row" fxLayoutGap.gt-sm="1em" fxLayout.lt-md="column">
+          <div fxFlexOrder="2" fxFlex="35" fxFlex.lt-md="100" class="previewImg mat-elevation-z4"
+               [style.background-image]="'url(assets/img/' + portfolio.getProject(key).anchorImage + ')'"></div>
+          <span fxFlex="65">
       <mat-card-header class="searchHeader">
-        <mat-card-title class="searchTitle" [routerLink]="'/project/' + key"> {{ portfolio.getProject(key).title }}</mat-card-title>
+        <mat-card-title class="searchTitle" [routerLink]="'/project/' + key">
+          {{ portfolio.getProject(key).title }}
+        </mat-card-title>
       </mat-card-header>
-      <mat-card-content class="searchCardContent" >
+      <mat-card-content class="searchCardContent">
         <p class="iconPile">
           <span *ngFor="let i of portfolio.getProject(key).frameWorks" [class]="portfolio.getFrameworkIcon(i)"></span>
         </p>
@@ -26,14 +26,14 @@
         </p>
       </mat-card-content>
       </span>
-      </div>
-      <mat-card-actions fxLayout="row" fxLayoutAlign.lt-md="space-between">
-        <button mat-stroked-button [routerLink]="'/project/' + key" color="primary">Project Page</button>
-        <button mat-stroked-button *ngIf="portfolio.getProject(key).sourceCode !== null" (click)="viewSourceCodeByKey(key)" color="primary">Source Code</button>
-      </mat-card-actions>
-
-    </mat-card>
-
-  </div>
+        </div>
+        <mat-card-actions fxLayout="row" fxLayoutAlign.lt-md="space-between">
+          <button mat-stroked-button [routerLink]="'/project/' + key" color="primary">Project Page</button>
+          <button mat-stroked-button *ngIf="portfolio.getProject(key).sourceCode !== null"
+                  (click)="viewSourceCodeByKey(key)" color="primary">Source Code
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
   </div>
 </ng-container>

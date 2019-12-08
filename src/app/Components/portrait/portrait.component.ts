@@ -8,15 +8,11 @@ import { PersonalInfoService } from '../../Services/personal-info.service';
   styleUrls: ['./portrait.component.scss']
 })
 export class PortraitComponent implements OnInit {
-  // @Input() rowHeight: number;
-  // @Input() rowSpan: number;
-
 
   constructor(public me: PersonalInfoService) {
   }
 
   ngOnInit() {
-
   }
 
 
