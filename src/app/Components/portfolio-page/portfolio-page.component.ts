@@ -17,8 +17,11 @@ export class PortfolioPageComponent implements OnInit {
     this.projects = [];
     this.route.params.subscribe(routeParams => {
       this.portfolio.areProjectsLoaded().then( () => {
-        console.log('routeparamis', routeParams.frameWork.toString());
-        this.projects = this.portfolio.projectsByFramework(routeParams.frameWork.toString());
+        if (routeParams.frameWork.toString() === 'all') {
+          this.projects = this.portfolio.getProjectsList();
+        } else {
+          this.projects = this.portfolio.projectsByFramework(routeParams.frameWork.toString());
+        }
       });
     });
   }

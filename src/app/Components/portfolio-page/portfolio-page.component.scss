@@ -1,15 +1,16 @@
-@import 'src/theme.scss';
+@import '~src/theme.scss';
 
-::ng-deep {
-  mat-card-header {
-    border-bottom: 1px solid $caleb-text;
-  }
-}
 .resultCards {
   margin-bottom: 2em;
   .searchCardContent {
     margin-left: 1em;
     margin-top: 1em;
+  }
+  .searchTitle:hover {
+    cursor: pointer;
+  }
+  .searchHeader {
+    border-bottom: 1px solid $caleb-text;
   }
   .projectCard {
     margin-top: 1em;
@@ -18,10 +19,11 @@
     position: relative;
   }
   .previewImg {
-    border-radius: .5em;
+    //border-radius: .5em;
     min-height: 150px;
+    width: 100%;
     background-size: cover;
-    float: left;
+    //float: left;
     margin-right: 2em;
   }
   .iconPile{

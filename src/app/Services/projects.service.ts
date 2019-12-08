@@ -37,6 +37,10 @@ export class ProjectsService {
     return this.projects[key];
   }
 
+  getProjectsList(): string[] {
+    return Object.keys(this.projects);
+  }
+
   sanitizeFrameWork(frameWork: string): string {
     const translation = [
       ['#', 'sharp'],
@@ -68,8 +72,6 @@ export class ProjectsService {
         }
       }
     }
-    console.log(sanitizedFrameWork);
-    console.log(this.keysByFramework[sanitizedFrameWork]);
     // After the hashmap is populated, return the hashmaps by framework.
     return (sanitizedFrameWork in this.keysByFramework) ? this.keysByFramework[sanitizedFrameWork] : [];
   }
