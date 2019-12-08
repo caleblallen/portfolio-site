@@ -7,6 +7,7 @@ import * as ddl from 'css-doodle';
   templateUrl: './homepage-doodle.component.html',
   styleUrls: ['./homepage-doodle.component.scss']
 })
+
 export class HomepageDoodleComponent implements OnInit, AfterViewInit {
   readonly isBrowser: boolean;
   readonly appBackground: string;
@@ -28,7 +29,6 @@ export class HomepageDoodleComponent implements OnInit, AfterViewInit {
     }
   }
 
-//             @grid:  10x60 / 100vmax 30vmax;
   private updateDoodle(doodle, hue): number {
     doodle.update(
       `:doodle {
@@ -53,7 +53,7 @@ export class HomepageDoodleComponent implements OnInit, AfterViewInit {
 
     setInterval(() => {
       hue = this.updateDoodle(doodle, hue);
-    }, 2000);
+    }, 2250);
 
   }
 

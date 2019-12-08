@@ -1,40 +1,17 @@
 @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
 @import '~src/theme.scss';
 
-/*@mixin angular-material-theme($caleb-theme) {
-
-}*/
-
-$AppBackground: mat-color($caleb-foreground);
-$AngularAccent: mat-color($caleb-accent);
-
-$darkColor: #402d2d;
-$fontColor: #ffffff;
-$left-offset: 29px;
-$clip-height: 50px;
-$line-height: $clip-height - 5px;
-$total-lines: 1;
-$gridSize: calc(100vmax / 60);
-
 .introduction {
-  background-color: $AppBackground;
+  background-color: mat-color($caleb-foreground);
   padding-top: 3em;
-
   .byline {
     font-size: 1.4em;
-
     strong {
-      color: $AngularAccent;
+      color: mat-color($caleb-accent);
       letter-spacing: 2px;
     }
   }
-}
-
-
-.introduction {
-
   .container {
     text-align: center;
   }
 }
-

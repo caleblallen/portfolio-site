@@ -53,7 +53,6 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
     TopBarComponent,
     HomePageComponent,
     PortraitComponent,
-    HomepageTitleBarComponent,
     SocialMediaLinksComponent,
     PortfolioProjectComponent,
     ProjectWriteupComponent,
