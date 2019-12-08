@@ -12,7 +12,6 @@ export class AppComponent {
   title = 'calebAllenDotCom';
 
   constructor(private activeRoute: ActivatedRoute) {
-    console.log(activeRoute);
   }
 
   prepareRoute(outlet: RouterOutlet) {
