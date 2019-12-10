@@ -48,7 +48,8 @@ try {
 
 // Express server
 const app = express();
-
+console.log(env.port);
+console.log(env.production);
 const PORT = process.env.PORT || env.port;
 const DIST_FOLDER = join(process.cwd(), 'dist/browser');
 
