@@ -27,7 +27,7 @@ export class NavigationService {
       if (!c.path.includes(':') && !c.path.includes('**')) {
         baseRoutes.push(
           {
-            title: (c.path === '') ? 'Home' : this.toTitleCase(c.path),
+            text: (c.path === '') ? 'Home' : this.toTitleCase(c.path),
             link: c.path
           });
       }

@@ -30,7 +30,7 @@ export class TopBarComponent implements OnInit {
     };
 
     for (const e of this.nav.getBaseRoutes()) {
-      this.menus[e.title] = e;
+      this.menus[e.text] = e;
     }
 
     this.keys = Object.keys(this.menus);
@@ -47,7 +47,7 @@ export class TopBarComponent implements OnInit {
     for (const i of projectKeys) {
       const project = this.pServe.getProject(i);
       this.menus.Portfolio.push({
-        title: project.title,
+        text: project.title,
         link: '/project/' + i
       });
     }

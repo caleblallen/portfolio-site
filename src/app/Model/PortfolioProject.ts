@@ -9,16 +9,11 @@ export class PortfolioProject {
   };
   description: string;
   postMortem: string;
-  sourceCode: {
-    link: string,
-    text: string
-  };
-  liveLink: {
-    link: string,
-    text: string
-  };
+  sourceCode: WebLink;
+  liveLink: WebLink;
   frameWorks: string[];
   gallery: string[];
   anchorImage: string;
   documents: WebLink[];
+  youtube: WebLink;
 }

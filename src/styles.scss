@@ -1,5 +1,5 @@
 @import '~@angular/material/theming';
-@import '~src/theme.scss';
+@import 'src/theme.scss';
 
 
 html {
@@ -42,4 +42,9 @@ strong {
   color: mat-color($caleb-accent);
   letter-spacing: 2px;
 }
+
+.ml-1em {
+  margin-left: 1em;
+}
+
 

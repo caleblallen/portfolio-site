@@ -11,6 +11,12 @@ const env = environment;
   providedIn: 'root'
 })
 export class ProjectsService {
+  projects: {};
+  private readonly projectsLoaded: Promise<boolean>;
+  private readonly frameworkIcons: object;
+  private readonly keysByFramework: {
+    [frameWork: string]: string[];
+  };
 
   constructor(private http: HttpClient) {
     // TODO: Re-evaluate this injection.
@@ -27,18 +33,12 @@ export class ProjectsService {
     this.keysByFramework = {};
   }
 
-  projects: {};
-  private readonly projectsLoaded: Promise<boolean>;
-  private readonly frameworkIcons: object;
-  private readonly keysByFramework: {
-    [frameWork: string]: string[];
-  };
 
   sanitizeFrameWork(frameWork: string): string {
     const translation = [
       ['#', 'sharp'],
       ['+', 'plus'],
-      ['.', 'dot']
+      ['.', 'dot'],
     ];
 
     let fw = frameWork.toLowerCase();

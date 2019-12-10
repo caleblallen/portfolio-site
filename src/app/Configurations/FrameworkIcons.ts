@@ -1,5 +1,6 @@
 export const FrameworkIcons = {
   amazonwebservices: 'devicon-amazonwebservices-plain',
+  aws: 'devicon-amazonwebservices-plain',
   android: 'devicon-android-plain',
   angularjs: 'devicon-angularjs-plain',
   apache: 'devicon-apache-plain',

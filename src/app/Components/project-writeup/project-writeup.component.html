@@ -26,6 +26,10 @@
 
   </ng-container>
 
+  <ng-container *ngIf="project.youtube">
+    <app-youtube-video [lnk]="project.youtube"></app-youtube-video>
+  </ng-container>
+
   <ng-container *ngIf="project.gallery !== null && project.gallery.length > 0">
     <mat-divider></mat-divider>
     <app-project-gallery></app-project-gallery>

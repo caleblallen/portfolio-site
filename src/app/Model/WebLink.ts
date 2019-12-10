@@ -1,4 +1,4 @@
 export class WebLink {
-  title: string;
+  text: string;
   link: string;
 }

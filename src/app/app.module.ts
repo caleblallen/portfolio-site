@@ -43,6 +43,7 @@ import { FileAttachmentsComponent } from './Components/file-attachments/file-att
 import { HttpClientModule } from '@angular/common/http';
 import { HomepageDoodleComponent } from './Components/homepage-doodle/homepage-doodle.component';
 import { PageNotFoundComponent } from './Components/page-not-found/page-not-found.component';
+import { YoutubeVideoComponent } from './Components/youtube-video/youtube-video.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { PageNotFoundComponent } from './Components/page-not-found/page-not-foun
     FileAttachmentsComponent,
     HomepageDoodleComponent,
     PageNotFoundComponent,
+    YoutubeVideoComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({appId: 'serverApp'}),
