@@ -3,7 +3,15 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+
+
+
+module.exports = env => {
+  let envFilePath = './environment.ts';
+  if (env.production) {
+    envFilePath = './src/environments/environment.prod.ts';
+  }
+  return {
   mode: 'none',
   entry: {
     // This is our Express server for Dynamic universal
@@ -35,6 +43,10 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.NormalModuleReplacementPlugin(
+      /\.\/src\/environments\/environment/,
+      envFilePath
+    ),
     new webpack.ContextReplacementPlugin(
       // fixes WARNING Critical dependency: the request of a dependency is an expression
       /(.+)?angular(\\|\/)core(.+)?/,
@@ -48,4 +60,5 @@ module.exports = {
       {}
     )
   ]
+  }
 };

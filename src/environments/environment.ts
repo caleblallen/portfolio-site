@@ -1,9 +1,9 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
-// The list of file replacements can be found in `angular.json`.
+// The list of file replacements can be found in `angular.json`. :)
 
 export const environment = {
-  production: true,
+  production: false,
   port: 65000,
   certificate: {
     key: '/etc/letsencrypt/live/caleballen.com/privkey.pem',
