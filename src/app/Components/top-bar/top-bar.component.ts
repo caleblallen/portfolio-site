@@ -5,6 +5,7 @@ import { NavigationService } from '../../Services/navigation.service';
 import { Router } from '@angular/router';
 import { PersonalInfoService } from '../../Services/personal-info.service';
 import { PortfolioProject } from '../../Model/PortfolioProject';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-top-bar',
@@ -19,6 +20,8 @@ export class TopBarComponent implements OnInit {
     About: WebLink;
   };
   readonly keys: string[];
+
+  private projPerPage: number;
 
   constructor(public me: PersonalInfoService,
               public pServe: ProjectsService,
@@ -39,6 +42,8 @@ export class TopBarComponent implements OnInit {
     this.pServe.areProjectsLoaded().then(() => {
       this.populateProjects();
     });
+
+    this.projPerPage = environment.projectsPerPage;
 
   }
 

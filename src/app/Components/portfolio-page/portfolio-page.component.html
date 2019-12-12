@@ -1,6 +1,6 @@
 <ng-container *ngIf="portfolio.areProjectsLoaded() | async">
   <div fxLayout="column" fxLayoutAlign="center center">
-    <div fxLayout="row" *ngFor="let key of projects"
+    <div fxLayout="row" *ngFor="let key of projects.slice((pageNumber - 1) * projPerPage, pageNumber * projPerPage)"
          class="resultCards"
          ngStyle.xl="width: 1700px"
          ngStyle.lg="width: 1100px"
@@ -34,6 +34,17 @@
           </button>
         </mat-card-actions>
       </mat-card>
+    </div>
+    <div *ngIf="hasPreviousPage() || hasNextPage()" class="paginatorButtons">
+      <button [routerLink]="['/portfolio',frameWork, pageNumber - 1]"
+              [disabled]="! hasPreviousPage()" mat-icon-button color="accent" aria-label="Click to view the previous page of projects">
+        <mat-icon>arrow_back_ios</mat-icon>
+      </button>
+      <span>Page {{ pageNumber }}</span>
+      <button [routerLink]="['/portfolio', frameWork, (pageNumber + 1)]"
+              [disabled]="! hasNextPage()" mat-icon-button color="accent" aria-label="Click to view the next page of projects">
+        <mat-icon>arrow_forward_ios</mat-icon>
+      </button>
     </div>
   </div>
 </ng-container>

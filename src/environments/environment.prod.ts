@@ -5,5 +5,6 @@ export const environment = {
     key: '/etc/letsencrypt/live/caleballen.com/privkey.pem',
     cert: '/etc/letsencrypt/live/caleballen.com/fullchain.pem'
   },
-  projectsURL: 'https://tinydragon.dev/projectsAPI/getProjects'
+  projectsURL: 'https://tinydragon.dev/projectsAPI/getProjects',
+  projectsPerPage: 3
 };

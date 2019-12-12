@@ -1,4 +1,4 @@
-@import '~src/theme.scss';
+@import 'src/theme.scss';
 
 .resultCards {
   margin-bottom: 2em;
@@ -33,5 +33,11 @@
       margin-right: 0.5em;
 
     }
+  }
+}
+
+.paginatorButtons{
+  button {
+    display: inline-block;
   }
 }

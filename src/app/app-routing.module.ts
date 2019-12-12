@@ -14,6 +14,7 @@ const routes: Routes = [
   {path: '', resolve: {
       path: PathResolveService
     }, component: HomePageComponent, pathMatch: 'full'},
+  {path: 'portfolio/:frameWork/:page', component: PortfolioPageComponent, data: {animation: 'OtherPage'}},
   {path: 'portfolio/:frameWork', component: PortfolioPageComponent, data: {animation: 'OtherPage'}},
   // {path: 'portfolio', component: PortfolioPageComponent, data: {animation: 'OtherPage'}},
   {path: 'about', component: AboutPageComponent, data: {animation: 'OtherPage'}},

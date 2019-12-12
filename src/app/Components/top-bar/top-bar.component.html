@@ -11,7 +11,7 @@
             <ng-container *ngIf="arrayTest(menus[k])">
               <button [matMenuTriggerFor]="menu" class="strangeButton" mat-button>{{ k }}</button>
               <mat-menu #menu="matMenu" fxHide>
-                <button *ngFor="let link of menus[k].slice(0,5)" [routerLink]="link.link" mat-menu-item> {{ link.text }}</button>
+                <button *ngFor="let link of menus[k].slice(0,projPerPage)" [routerLink]="link.link" mat-menu-item> {{ link.text }}</button>
                 <mat-divider></mat-divider>
                 <button mat-menu-item [routerLink]="k.toLowerCase() + '/all'">View All</button>
               </mat-menu>

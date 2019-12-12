@@ -38,7 +38,7 @@ export const FrameworkIcons = {
   elm: 'devicon-elm-plain',
   ember: 'devicon-ember-plain',
   erlang: 'devicon-erlang-plain',
-  express: 'devicon-express-plain',
+  express: 'devicon-express-original',
   facebook: 'devicon-facebook-plain',
   firefox: 'devicon-firefox-plain',
   foundation: 'devicon-foundation-plain',
