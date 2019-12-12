@@ -19,7 +19,6 @@ export class ProjectsService {
   };
 
   constructor(private http: HttpClient) {
-    // TODO: Re-evaluate this injection.
     this.frameworkIcons = fwIcons.FrameworkIcons;
     this.projects = {};
     this.projectsLoaded = new Promise<boolean>((resolve, reject) => {
