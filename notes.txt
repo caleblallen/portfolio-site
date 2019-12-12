@@ -1,8 +1,5 @@
 ng build --prod --base-href "/beta/" --deploy-url "/beta/" --outputPath "c:\Users\callen\Desktop\beta_site"
 
-testing 123
-
-
 {
   "title": "Spottr",
   "description": "Spottr is a social network where Photographers my share detailed scenic locations and photos taken at them.",

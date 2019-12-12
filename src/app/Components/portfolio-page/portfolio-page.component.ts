@@ -21,8 +21,12 @@ export class PortfolioPageComponent implements OnInit {
         } else {
           this.projects = this.portfolio.projectsByFramework(routeParams.frameWork.toString());
         }
+        this.projects = this.projects.sort((x, y) =>
+          this.portfolio.getProject(y).priority - this.portfolio.getProject(x).priority);
       });
     });
+
+
   }
 
   viewSourceCodeByKey(key) {

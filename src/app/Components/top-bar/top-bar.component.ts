@@ -4,6 +4,7 @@ import { WebLink } from '../../Model/WebLink';
 import { NavigationService } from '../../Services/navigation.service';
 import { Router } from '@angular/router';
 import { PersonalInfoService } from '../../Services/personal-info.service';
+import { PortfolioProject } from '../../Model/PortfolioProject';
 
 @Component({
   selector: 'app-top-bar',
@@ -45,12 +46,17 @@ export class TopBarComponent implements OnInit {
     const projectKeys = Object.keys(this.pServe.projects);
 
     for (const i of projectKeys) {
-      const project = this.pServe.getProject(i);
+      const project: PortfolioProject = this.pServe.getProject(i);
       this.menus.Portfolio.push({
         text: project.title,
         link: '/project/' + i
       });
     }
+
+    this.menus.Portfolio = this.menus.Portfolio.sort(
+      (x, y) =>
+        this.pServe.getProject(y.link.substring(9)).priority - this.pServe.getProject(x.link.substring(9)).priority);
+
   }
 
   ngOnInit() {
