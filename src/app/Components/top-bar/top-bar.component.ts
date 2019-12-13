@@ -21,7 +21,7 @@ export class TopBarComponent implements OnInit {
   };
   readonly keys: string[];
 
-  private projPerPage: number;
+  readonly projPerPage: number;
 
   constructor(public me: PersonalInfoService,
               public pServe: ProjectsService,
