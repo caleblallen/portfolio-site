@@ -1,4 +1,11 @@
-@import '~src/theme.scss';
+@import 'src/theme.scss';
+
+$levelOneColor: mat-color($caleb-primary,50);
+$levelTwoColor: mat-color($caleb-primary,200);
+$levelThreeColor: mat-color($caleb-primary,400);
+$levelFourColor: mat-color($caleb-primary,600);
+$levelFiveColor: mat-color($caleb-primary,800);
+
 
 $fSizeCalendar: 10px;
 $fSizeSmall: 12px;
@@ -149,4 +156,46 @@ h2.f4.text-normal.mb-3 {
 
 #user-activity-overview {
   display: none;
+}
+
+rect {
+  /* level 1 (no commits) */
+  &.day[fill="#ebedf0"] {
+    fill: $levelOneColor;
+  }
+
+  /* level 2 */
+  &.day[fill="#c6e48b"] {
+    fill: $levelTwoColor;
+  }
+  /* level 3 */
+  &.day[fill="#7bc96f"] {
+    fill: $levelThreeColor;
+  }
+  /* level 4 */
+  &.day[fill="#239a3b"] {
+    fill: $levelFourColor;
+  }
+  /* level 5 */
+  &.day[fill="#196127"] {
+    fill: $levelFiveColor;
+  }
+}
+
+.legend {
+  li:nth-child(1){
+    background-color: $levelOneColor !important;
+  }
+  li:nth-child(2){
+    background-color: $levelTwoColor !important;
+  }
+  li:nth-child(3){
+    background-color: $levelThreeColor !important;
+  }
+  li:nth-child(4){
+    background-color: $levelFourColor !important;
+  }
+  li:nth-child(5){
+    background-color: $levelFiveColor !important;
+  }
 }
