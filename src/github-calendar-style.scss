@@ -159,30 +159,35 @@ h2.f4.text-normal.mb-3 {
 }
 
 rect {
+  rx: 2px;
   /* level 1 (no commits) */
-  &.day[fill="#ebedf0"] {
+  &[fill="#ebedf0"] {
     fill: $levelOneColor;
   }
 
   /* level 2 */
-  &.day[fill="#c6e48b"] {
+  &[fill="#9be9a8"] {
     fill: $levelTwoColor;
   }
   /* level 3 */
-  &.day[fill="#7bc96f"] {
+  &[fill="#40c463"] {
     fill: $levelThreeColor;
   }
   /* level 4 */
-  &.day[fill="#239a3b"] {
+  &[fill="#30a14e"] {
     fill: $levelFourColor;
   }
   /* level 5 */
-  &.day[fill="#196127"] {
+  &[fill="#216e39"] {
     fill: $levelFiveColor;
   }
 }
 
 .legend {
+  li{
+    border-radius: 3px;
+
+  }
   li:nth-child(1){
     background-color: $levelOneColor !important;
   }
