@@ -34,11 +34,11 @@
     </div>
   </mat-card-content>
   <mat-card-actions>
-    <div class="container" fxLayout="row">
-      <div fxFlex="50%">
+    <div class="container" fxLayout="row" fxFlexAlign="end center">
+      <div *ngIf="project.sourceCode">
         <button (click)="viewSourceCode()" mat-stroked-button>Source Code</button>
       </div>
-      <div fxFlex="50%">
+      <div>
         <ng-container *ngIf="project.liveLink !== null">
           <button (click)="viewLiveProject()" mat-stroked-button>Live Preview</button>
         </ng-container>

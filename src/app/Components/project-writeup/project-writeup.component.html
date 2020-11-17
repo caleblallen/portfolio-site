@@ -14,7 +14,7 @@
   </ng-container>
   <mat-divider></mat-divider>
 
-  <h3>What I learned:</h3>
+  <h3>Takeaways:</h3>
   <section ngClass.gt-sm="pl-1em">
 
     <section [innerHTML]="project.postMortem | markdown"></section>
@@ -30,10 +30,13 @@
     <app-youtube-video [lnk]="project.youtube"></app-youtube-video>
   </ng-container>
 
+
   <ng-container *ngIf="project.gallery !== null && project.gallery.length > 0">
     <mat-divider></mat-divider>
     <app-project-gallery></app-project-gallery>
   </ng-container>
-
-
+  <ng-container *ngIf="project.video">
+    <mat-divider></mat-divider>
+    <app-embeded-video [lnk]="project.video"></app-embeded-video>
+  </ng-container>
 </section>

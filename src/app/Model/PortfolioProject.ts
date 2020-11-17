@@ -16,5 +16,6 @@ export class PortfolioProject {
   anchorImage: string;
   documents: WebLink[];
   youtube: WebLink;
+  video?: string;
   priority: number;
 }
