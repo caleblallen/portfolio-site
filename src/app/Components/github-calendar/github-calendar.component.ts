@@ -15,8 +15,10 @@ export class GithubCalendarComponent implements OnInit {
   ngOnInit() {
     GitHubCalendar('.github-calendar', this.me.github()[0], {
       summary_text: `Summary for ${this.me.github()[0]}`,
-      global_stats: true,
+      global_stats: false,
       responsive: true
+    }).then(r => {
+      console.log(r.text());
     });
   }
 }

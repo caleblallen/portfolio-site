@@ -20,11 +20,11 @@ export class SocialMediaLinksComponent implements OnInit {
         icon: 'icon ion-logo-twitter',
         aria: 'Link to Twitter Account with Twitter Logo'
       },
-      {
+/*      {
         platform: 'Twitch',
         icon: 'icon ion-logo-twitch',
         aria: 'Link to Twitch Account with Twitch logo'
-      },
+      },*/
       {
         platform: 'LinkedIn',
         icon: 'icon ion-logo-linkedin',
