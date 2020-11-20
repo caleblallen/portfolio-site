@@ -9,10 +9,10 @@
           <pre>{{ entry.category }}</pre>
         </td>
         <td>
-          <ng-container *ngFor="let dets of entry.details">
+          <ng-container *ngFor="let dets of entry.details; let last = last">
             <span class="tech-dets">
-              <span>{{ dets.name }}&nbsp;</span>
-              <span>({{ dets.version }}),</span>
+              <span>{{ dets.name }}{{(last) ? '' : ','}}</span>
+              <!--              <span>({{ dets.version }}),</span>-->
             </span>
           </ng-container>
         </td>

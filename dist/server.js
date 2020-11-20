@@ -94,8 +94,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var zone_js_dist_zone_node__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(zone_js_dist_zone_node__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6);
 /* harmony import */ var express__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(express__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(13);
-/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(101);
+/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(http__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var https__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(144);
+/* harmony import */ var https__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(https__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(13);
+/* harmony import */ var path__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(path__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _src_environments_environment__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(145);
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3);
+/* harmony import */ var fs__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(fs__WEBPACK_IMPORTED_MODULE_6__);
 /**
  * *** NOTE ON IMPORTING FROM ANGULAR AND NGUNIVERSAL IN THIS FILE ***
  *
@@ -115,12 +122,36 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+const env = _src_environments_environment__WEBPACK_IMPORTED_MODULE_5__["environment"];
+let credentials = null;
+try {
+    if (fs__WEBPACK_IMPORTED_MODULE_6__["existsSync"](env.certificate.key)) {
+        credentials = {
+            key: fs__WEBPACK_IMPORTED_MODULE_6__["readFileSync"](env.certificate.key),
+            cert: fs__WEBPACK_IMPORTED_MODULE_6__["readFileSync"](env.certificate.cert),
+            minVersion: 'TLSv1.2',
+            maxVersion: 'TLSv1.3'
+        };
+    }
+    else {
+        console.log(`Could not read file at ${env.certificate.key}`);
+    }
+}
+catch (err) {
+    console.error(err.message);
+}
 // Express server
 const app = express__WEBPACK_IMPORTED_MODULE_1__();
-const PORT = process.env.PORT || 4000;
-const DIST_FOLDER = Object(path__WEBPACK_IMPORTED_MODULE_2__["join"])(process.cwd(), 'dist/browser');
+console.log(env.port);
+console.log(env.production);
+const PORT = process.env.PORT || env.port;
+const DIST_FOLDER = Object(path__WEBPACK_IMPORTED_MODULE_4__["join"])(process.cwd(), 'dist/browser');
 // * NOTE :: leave this as require() since this file is built Dynamically from webpack
-const { AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap } = __webpack_require__(144);
+const { AppServerModuleNgFactory, LAZY_MODULE_MAP, ngExpressEngine, provideModuleMap } = __webpack_require__(146);
 // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
 app.engine('html', ngExpressEngine({
     bootstrap: AppServerModuleNgFactory,
@@ -140,10 +171,45 @@ app.get('*.*', express__WEBPACK_IMPORTED_MODULE_1__["static"](DIST_FOLDER, {
 app.get('*', (req, res) => {
     res.render('index', { req });
 });
-// Start up the Node server
-app.listen(PORT, () => {
-    console.log(`Node Express server listening on http://localhost:${PORT}`);
+/*// All regular routes use the Universal engine
+app.get('/', (req, res) => {
+  res.render('index', { req });
 });
+
+// All regular routes use the Universal engine
+app.get('/#/!*', (req, res) => {
+  res.render('index', { req });
+});
+
+// All regular routes use the Universal engine
+app.get('/!*', (req, res) => {
+  let newUrl = '';
+  if (req.secure) {
+    newUrl += 'https://';
+  } else {
+    newUrl += 'http://';
+  }
+
+  newUrl += `${ req.get('host') }/#${ req.originalUrl }`;
+
+  res.writeHead(302, {
+    Location: newUrl
+  });
+  res.end();
+});*/
+// TODO: Check for production environment. FileReplacement in angular.json is not switching to production environment during build.
+if (credentials !== null) {
+    const httpsServer = https__WEBPACK_IMPORTED_MODULE_3__["createServer"](credentials, app);
+    httpsServer.listen(PORT, () => {
+        console.log(`Node Express server listening on port ${PORT}`);
+    });
+}
+else {
+    const httpServer = http__WEBPACK_IMPORTED_MODULE_2__["createServer"](app);
+    httpServer.listen(PORT, () => {
+        console.log(`Node Express server listening on port ${PORT}`);
+    });
+}
 
 
 /***/ }),
@@ -25578,6 +25644,31 @@ function createRedirectDirectoryListener () {
 
 /***/ }),
 /* 144 */
+/***/ (function(module, exports) {
+
+module.exports = require("https");
+
+/***/ }),
+/* 145 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return environment; });
+const environment = {
+    production: true,
+    port: 65000,
+    certificate: {
+        key: '/etc/letsencrypt/live/caleballen.com/privkey.pem',
+        cert: '/etc/letsencrypt/live/caleballen.com/fullchain.pem'
+    },
+    projectsURL: 'https://tinydragon.dev/projectsAPI/getProjects',
+    projectsPerPage: 3
+};
+
+
+/***/ }),
+/* 146 */
 /***/ (function(module, exports) {
 
 module.exports = require("./server/main");

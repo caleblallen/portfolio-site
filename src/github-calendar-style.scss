@@ -6,7 +6,6 @@ $levelThreeColor: mat-color($caleb-primary,400);
 $levelFourColor: mat-color($caleb-primary,600);
 $levelFiveColor: mat-color($caleb-primary,800);
 
-
 $fSizeCalendar: 10px;
 $fSizeSmall: 12px;
 $fSizeMedium: 16px;
@@ -161,24 +160,24 @@ h2.f4.text-normal.mb-3 {
 rect {
   rx: 2px;
   /* level 1 (no commits) */
-  &[fill="#ebedf0"] {
+  &[fill="var(--color-calendar-graph-day-bg)"] {
     fill: $levelOneColor;
   }
 
   /* level 2 */
-  &[fill="#9be9a8"] {
+  &[fill="var(--color-calendar-graph-day-L1-bg)"] {
     fill: $levelTwoColor;
   }
   /* level 3 */
-  &[fill="#40c463"] {
+  &[fill="var(--color-calendar-graph-day-L2-bg)"] {
     fill: $levelThreeColor;
   }
   /* level 4 */
-  &[fill="#30a14e"] {
+  &[fill="var(--color-calendar-graph-day-L3-bg)"] {
     fill: $levelFourColor;
   }
   /* level 5 */
-  &[fill="#216e39"] {
+  &[fill="var(--color-calendar-graph-day-L4-bg)"] {
     fill: $levelFiveColor;
   }
 }
